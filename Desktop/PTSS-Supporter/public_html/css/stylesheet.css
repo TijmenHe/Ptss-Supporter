@@ -34,39 +34,49 @@ width:100vw;
 height:100vh;
 text-align:center;
  }
- .tablediv{
- position: absolute;
-    left: 50%; top: 50%; /*move the object to the center of the parent object*/
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+ .topdiv{
+position:absolute;
+background-color:lightblue;
+width:100vw;
+height:40vh;
+top:10vh;
   }
-  
-table#hometable td, tr {
-   
-   width:30vw;
-   height:30vh;
-   text-align:center;
-   margin:0;
-   padding:0;
-   
-} 
-table {
-    margin: 0 auto; 
-    border-collapse: separate;
-    border-spacing: 10vh;
-  }
-  table#stemmingtable td, tr {
-   
-   width:30vh;
-   height:30vh;
-   text-align:center;
-   margin:0px;
-   padding:0px;
-   
-} 
+.middlediv
+{
+position:absolute;
+background-color:lightblue;
+width:100vw;
+height:10vh;
+top:50vh;
+text-align:center;
+font-size: 3vmin;
+font-family: opensans;
+}  
+  .botdiv{
+position:absolute;
+background-color:lightblue;
+width:100vw;
+height:40vh;
+top:60vh;
+  } 
+.bigbuttons
+{
+    position:relative;
+    height:40vh;
+    width:42vw;
+    margin-top:2vh;
+    margin-left:1vw;
+    margin-right:1vw;
+    display:inline;
+	text-decoration:none;
+	-webkit-transition: all 0.1s;
+	-moz-transition: all 0.1s;
+	transition: all 0.1s;
+	
+-webkit-box-shadow: 1vh 1vh 1vh 0vh rgba(135,173,199,1);
+-moz-box-shadow: 1vh 1vh 1vh 0vh rgba(135,173,199,1);
+box-shadow: 1vh 1vh 1vh 0vh rgba(135,173,199,1);
+}
 .push_button{
 	position:relative;
 	width:20vh;
@@ -274,27 +284,8 @@ nav.vertical {
                 padding: 1vh 0 1vh 5vh;
               }
                             
-.uitleghome
-{
-    text-align:center;
-    font-size: 2vmin;
-position:absolute;
-bottom:45vh;
-top:45vh;
-width:100vw;
-height:10vh;
-}
 
-.uitlegdiv
-{
-    text-align:center;
-    font-size: 1.5vmin;
-position:absolute;
-bottom:45vh;
-top:45vh;
-width:100vw;
-height:10vh;
-}
+
 
 #clouds{
 	
@@ -415,20 +406,9 @@ body {
 	
 	overflow: hidden;
 }
-.shadow
-{
-    height:30vh;
-    width:30vw;
-	display:block;
-	text-decoration:none;
-	-webkit-transition: all 0.1s;
-	-moz-transition: all 0.1s;
-	transition: all 0.1s;
-	
--webkit-box-shadow: 1vh 1vh 1vh 0vh rgba(135,173,199,1);
--moz-box-shadow: 1vh 1vh 1vh 0vh rgba(135,173,199,1);
-box-shadow: 1vh 1vh 1vh 0vh rgba(135,173,199,1);
-}
+
+
+
 .shadow2
 {
     height:26vh;
