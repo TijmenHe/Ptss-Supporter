@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+<html>
+
+
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="./css/stylesheet.css">
+
+<title>Home</title>
+
+</head>
+
+<body>
+
+        <div class="homediv">
+            <div id="headerdiv">
+                <ul><li><a href="#null" onclick="javascript:history.back();">
+                            <img src="images/vorige.png" class="home" alt="home">
+                        </a></li>
+                    <li><a href="index.html"><img src="images/img2.png" class="home" alt="home"></a></li>
+                    
+                    <li><a href="#null" onclick="javascript:history.forward();">
+                            <img src="images/volgende.png" class="home" alt="home">
+                        </a></li>
+                </ul>
+            </div>
+			<div class="wrapper2">
+  <nav class="vertical">
+    <ul>
+      <li>
+        <a href="pscyho-trauma.html">Wat is een trauma?</a>
+          </li>
+					<li>
+        <a href="pscyho.html">wat is PTSS?</a>
+          </li>
+					<li>
+        <a href="pscyho-behandeling.html">Behandeling van PTSS</a>
+				
+          </li>
+           <li>
+                            <a href="pscyho-vvb.html">Vechten, Vluchten, Bevriezen </a>
+<div>
+                               <ul>
+                                    <li><a href="pscyho-vvb_1.html">Deel 1</a></li>
+                                    <li><a href="pscyho-vvb_2.html">Deel 2</a></li>
+                                    <li><a href="pscyho-vvb_3.html">Deel 3</a></li>
+                                </ul>
+                            </div>
+                        </li>
+    <li>
+        <a href="pscyho-alexander.html">Het verhaal van Alexander</a>
+       
+      </li>
+      <li>
+        <a href="pscyho-bruiloft.html">De bruiloft</a>
+       
+      </li>
+    </ul>
+  </nav>
+  </div>
+<div id="contentContainer">
+        <div id="wrapper">
+            <div id="itemOne" class="content">
+              
+<span>
+
+<p>
+Diezelfde instinctreacties – vechten, vluchten en bevriezen – zie je ook bij mensen. Welke past het beste bij jou?
+</p><br><br>
+Vechten<br><br>
+Vluchten<br><br>
+of<br><br> Bevriezen<br>
+
+</span>
+
+            </div>
+            <div id="itemOne" class="content">
+              <span>
+							<p> 
+
+
+
+
+Dat was het zoogdierenbrein. We hebben ook nog het mensenbrein. Het gedeelte van de hersenen waarme we praten, nadenken, overleggen, organiseren en plannen. 
+
+Het vierkant om het menselijk brein noemen we je ‘raampje, je raampje van wat je aankan.’
+
+</p>
+
+
+
+
+
+
+
+
+
+
+<p>
+Als er geen gevaar dreigt, werken als onze hersendelen tegelijk, bijvoorbeeld als je lekker televisie aan het kijken bent.
+
+</p>
+							 </span>
+            </div>
+            <div id="itemOne" class="content">      <p>
+<span>                
+
+
+
+
+De stress die je dan voelt kun je met een lijntje weergeven. Dat lijntje bevindt zich dan hier 
+
+</span>      </p>
+            </div>
+            <div id="itemOne" class="content">
+              
+
+<span> 
+<p>
+
+
+Maar als het dan bedtijd is en je wilt heel graag verder kijken, maar dat mag niet van mama, dan word je een beetje boos en de stress loopt op
+ </p>
+</span>
+
+            </div>
+						<div id="itemOne" class="content">
+					
+						<span>
+                                                    <p>
+Als dit het lijntje is van stress, dan gaat dat zo omhoog. Je zegt tegen mama dat je het programma héél graag wilt afkijken. Als mama dan zegt dat dat mag, dan zakt het lijntje weer en wordt je rustig.
+                                                    </p>
+						</span>
+						</div>
+						
+					
+        </div>
+    </div>
+<div id="navLinks">
+    <ul>
+   <li class="itemLinks" data-pos="0px"></li>
+        <li class="itemLinks" data-pos="-675px"></li>
+        <li class="itemLinks" data-pos="-1350px"></li>
+        <li class="itemLinks" data-pos="-2025px"></li>
+				<li class="itemLinks" data-pos="-2700px"></li>
+				
+    </ul>
+</div>
+</div>
+ 
+    
+    <script>
+    	
+        var links = document.querySelectorAll(".itemLinks");
+        var wrapper = document.querySelector("#wrapper");
+        
+       
+        var activeLink = 0;
+        
+      
+        for (var i = 0; i < links.length; i++) {
+            var link = links[i];
+            link.addEventListener('click', setClickedItem, false);
+            
+           
+            link.itemID = i;
+        }
+
+    
+        links[activeLink].classList.add("active");
+
+        function setClickedItem(e) {
+            removeActiveLinks();
+
+            var clickedLink = e.target;
+            activeLink = clickedLink.itemID;
+            
+            changePosition(clickedLink);
+        }
+		
+        function removeActiveLinks() {
+            for (var i = 0; i < links.length; i++) {
+                links[i].classList.remove("active");
+            }
+        }
+        
+       
+		function changePosition(link) {
+        	var position = link.getAttribute("data-pos");
+            wrapper.style.left = position;
+            
+            link.classList.add("active");
+        }
+    </script>
+</body>
+
+</html>

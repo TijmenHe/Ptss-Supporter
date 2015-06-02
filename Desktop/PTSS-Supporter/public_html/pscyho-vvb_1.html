@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="./css/stylesheet.css">
+
+<title>Home</title>
+
+</head>
+
+<body>
+        <div class="homediv">
+            <div id="headerdiv">
+                <ul><li><a href="#null" onclick="javascript:history.back();">
+                            <img src="images/vorige.png" class="home" alt="home">
+                        </a></li>
+                    <li><a href="index.html"><img src="images/img2.png" class="home" alt="home"></a></li>
+                    
+                    <li><a href="#null" onclick="javascript:history.forward();">
+                            <img src="images/volgende.png" class="home" alt="home">
+                        </a></li>
+                </ul>
+            </div>
+			<div class="wrapper2">
+  <nav class="vertical">
+    <ul>
+      <li>
+        <a href="pscyho-trauma.html">Wat is een trauma?</a>
+          </li>
+					<li>
+        <a href="pscyho.html">wat is PTSS?</a>
+          </li>
+					<li>
+        <a href="pscyho-behandeling.html">Behandeling van PTSS</a>
+				
+          </li>
+           <li>
+                            <a href="pscyho-vvb.html">Vechten, Vluchten, Bevriezen </a>
+<div>
+                             <ul>
+                                    <li><a href="pscyho-vvb_1.html">Deel 1</a></li>
+                                    <li><a href="pscyho-vvb_2.html">Deel 2</a></li>
+                                    <li><a href="pscyho-vvb_3.html">Deel 3</a></li>
+                                </ul>
+                            </div>
+                        </li>
+    <li>
+        <a href="pscyho-alexander.html">Het verhaal van Alexander</a>
+       
+      </li>
+      <li>
+        <a href="pscyho-bruiloft.html">De bruiloft</a>
+       
+      </li>
+    </ul>
+  </nav>
+  </div>
+<div id="contentContainer">
+        <div id="wrapper">
+            <div id="itemOne" class="content">
+              
+<span><h3>Vechten, vluchten of bevriezen</h3>
+
+<p>Psycho-educatie over het fight, flight or freeze mechanisme. Het kind kan door het verhaal heen swipen totdat deze volledig is doorlopen.
+ Wanneer er gekozen moet worden welke reactie het kind herkent in zichzelf wordt deze niet opgeslagen en heeft dit geen effect op de vervolgschermen. 
+Dit is eerder een check of de kinderen hebben begrepen wat de instinctieve reacties zijn. </p>
+<p><img src="images/vvb1.jpg"></p> 
+
+</span>
+
+            </div>
+            <div id="itemOne" class="content">
+               <h3>Het reptielenbrein</h3><span>
+							<p> 
+
+Het reptielenbrein zit diep in onze hersenen. Dit deel van het brein zorgt voor de automatisch dingen in ons lijf, zoals hartslag en ademhaling. 
+Daar denken we niet over na, dat doen we gewoon. 
+</p>
+
+
+
+
+
+
+
+
+
+
+<p>De oorzaak van PTSS is vaak een ingrijpende gebeurtenis. 
+Deze kan je zelf hebben meegemaakt of hebben gezien, zoals bijvoorbeeld getuige zijn van een schietpartij. 
+Ook getuige zijn van een gebeurtenis kan leiden tot een PTSS.
+</p>
+							 </span><p><img src="images/vvb2.jpg" width="28%" height="28%"></p> 
+            </div>
+            <div id="itemOne" class="content">
+<span>                <h3>Het zoogdierenbrein</h3>
+
+
+
+Het zoogdierenbrein is het gedeelte van het brein dat zorgt voor de instinctreacties als er gevaar dreigt of als we stress hebben.
+ Instinctreacties die wij mensen hebben, lijken op die van de dieren. Laten we eens kijken wat de dieren doen als er gevaar dreigt:
+
+</span>
+            </div>
+            <div id="itemOne" class="content">
+              
+
+<span> 
+<p><h4>Wat doen hertjes als ze lekker aan het eten zijn en er komt een leeuw aan? </h4>
+
+Ze vluchten, omdat ze heel hard kunnen lopen. Ze vluchten tot er geen gevaar meer is. Vluchten is een instinctreactie. 
+ </p><p><img src="images/vvb3.jpg"></p> 
+</span>
+
+            </div>
+						<div id="itemOne" class="content">
+					
+						<span><h4>Wat doet die leeuw als hij een hertje heeft gevangen en hij lekker aan het eten is en er komt een andere leeuw aan? </h4>
+
+Hij vlucht niet want leeuwen vechten. Daar zijn ze goed in. Als er gevaar dreigt, vecht de leeuw. Dit is ook een instinctreactie. 
+
+						</span><p><img src="images/vvb4.jpg"></p> 
+						</div>
+						<div id="itemOne" class="content">
+					
+						<span>
+
+
+<p><h4>En wat doen konijntjes als ze in gevaar zijn? </h4>
+
+Ze bevriezen als het ware, zodat ze heel stil wachten tot het gevaar overgaat. Dat kan ook een instinctreactie zijn </p>
+
+						</span><p><img src="images/vvb5.jpg"></p> 
+						</div>
+					
+        </div>
+    </div>
+<div id="navLinks">
+    <ul>
+   <li class="itemLinks" data-pos="0px"></li>
+        <li class="itemLinks" data-pos="-675px"></li>
+        <li class="itemLinks" data-pos="-1350px"></li>
+        <li class="itemLinks" data-pos="-2025px"></li>
+				<li class="itemLinks" data-pos="-2700px"></li>
+				<li class="itemLinks" data-pos="-3375px"></li>
+    </ul>
+</div>
+</div>
+ 
+    
+    <script>
+    	
+        var links = document.querySelectorAll(".itemLinks");
+        var wrapper = document.querySelector("#wrapper");
+        
+       
+        var activeLink = 0;
+        
+      
+        for (var i = 0; i < links.length; i++) {
+            var link = links[i];
+            link.addEventListener('click', setClickedItem, false);
+            
+           
+            link.itemID = i;
+        }
+
+    
+        links[activeLink].classList.add("active");
+
+        function setClickedItem(e) {
+            removeActiveLinks();
+
+            var clickedLink = e.target;
+            activeLink = clickedLink.itemID;
+            
+            changePosition(clickedLink);
+        }
+		
+        function removeActiveLinks() {
+            for (var i = 0; i < links.length; i++) {
+                links[i].classList.remove("active");
+            }
+        }
+        
+       
+		function changePosition(link) {
+        	var position = link.getAttribute("data-pos");
+            wrapper.style.left = position;
+            
+            link.classList.add("active");
+        }
+    </script>
+</body>
+
+</html>

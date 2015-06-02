@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html>
+
+
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="./css/stylesheet.css">
+
+<title>Home</title>
+
+</head>
+
+<body>
+
+        <div class="homediv">
+            <div id="headerdiv">
+                <ul><li><a href="#null" onclick="javascript:history.back();">
+                            <img src="images/vorige.png" class="home" alt="home">
+                        </a></li>
+                    <li><a href="index.html"><img src="images/img2.png" class="home" alt="home"></a></li>
+                    
+                    <li><a href="#null" onclick="javascript:history.forward();">
+                            <img src="images/volgende.png" class="home" alt="home">
+                        </a></li>
+                </ul>
+            </div>
+			<div class="wrapper2">
+  <nav class="vertical">
+    <ul>
+      <li>
+        <a href="pscyho-trauma.html">Wat is een trauma?</a>
+          </li>
+					<li>
+        <a href="pscyho.html">wat is PTSS?</a>
+          </li>
+					<li>
+        <a href="pscyho-behandeling.html">Behandeling van PTSS</a>
+				
+          </li>
+      <li>
+        <a href="pscyho-vvb.html">Vechten, Vluchten, Bevriezen </a>
+        
+      </li>
+      <li>
+        <a href="pscyho-alexander.html">Het verhaal van Alexander</a>
+       
+      </li>
+      <li>
+        <a href="pscyho-bruiloft.html">De bruiloft</a>
+       
+      </li>
+    </ul>
+  </nav>
+  </div>
+<div id="contentContainer">
+        <div id="wrapper">
+            <div id="itemOne" class="content">
+              
+<span><h3>De bruiloft</h3>
+    <p>
+Om beter te begrijpen wat een trauma is zullen we dit leren aan de hand van een verhaal. 
+In dit geval een verhaal over een bruiloft. </p>
+    <img src="images/10.jpg" width="30%" height="50%">
+     
+</span>
+
+            </div>
+            <div id="itemOne" class="content">
+               <span>
+                   <br></br>	<p>
+
+Een bruiloftsdag is altijd druk en intens.
+Er gebeurt veel: de bruid wordt opgehaald, lunch, naar de kerk, receptie, diner en een feest. 
+Aan het eind van een drukke bruiloftsdag gaat iedereen weg en blijft het paar samen over.
+</p><img src="images/11.png" >
+
+							 </span>
+            </div>
+                  <div id="itemOne" class="content" width="30%" height="40%">
+               <span>
+                   <br></br>	<p>
+
+Vanaf dat moment verschijnen er in het hoofd fragmenten van gebeurtenissen die zich die dag hebben afgespeeld. 
+Dit zijn net korte filmpjes.
+Doordat de dag te intensief is geweest om alle gebeurtenissen direct te verwerken, gebeurt dat achteraf
+</p><img src="images/13.png" >
+
+							 </span>
+            </div>
+                  <div id="itemOne" class="content">
+               <span>
+                   <br></br>	<p>
+
+Bij het echtpaar zullen de filmpjes na een paar dagen minder voorkomen.
+Na een week of twee zien ze deze filmpjes niet meer. Ze hebben de dag ‘verwerkt.’
+</p><img src="images/14.jpg" >
+
+							 </span>
+            </div>
+            <div id="itemOne" class="content">
+               <span>
+                   <br></br>	<p>
+            Bij een ingrijpende gebeurtenis gebeurt eigenlijk hetzelfde. 
+            Het grote verschil is dat bij iets traumatisch de kleine filmpjes in het hoofd heel naar zijn. 
+            Deze kunnen nare gevoelens veroorzaken.
+		</p><img src="images/15.jpg" width="30%" height="50%">
+
+							 </span>
+            </div>	
+                   <div id="itemOne" class="content">
+               <span>
+                   <br></br>	<p>
+        Nare gevoelens worden liever vermeden en daarom worden de filmpjes vroegtijdig gestopt.
+        Daarom kan je deze filmpjes niet verwerken.
+		</p><img src="images/16.jpg" >
+
+							 </span>
+            </div>
+        </div>
+    </div>
+<div id="navLinks">
+    <ul>
+                <li class="itemLinks" data-pos="0px"></li>
+        <li class="itemLinks" data-pos="-675px"></li>
+        <li class="itemLinks" data-pos="-1350px"></li>
+        <li class="itemLinks" data-pos="-2025px"></li>
+				<li class="itemLinks" data-pos="-2700px"></li>
+				<li class="itemLinks" data-pos="-3375px"></li>
+     
+    </ul>
+</div>
+</div>
+ 
+    
+    <script>
+    	
+        var links = document.querySelectorAll(".itemLinks");
+        var wrapper = document.querySelector("#wrapper");
+        
+       
+        var activeLink = 0;
+        
+      
+        for (var i = 0; i < links.length; i++) {
+            var link = links[i];
+            link.addEventListener('click', setClickedItem, false);
+            
+           
+            link.itemID = i;
+        }
+
+    
+        links[activeLink].classList.add("active");
+
+        function setClickedItem(e) {
+            removeActiveLinks();
+
+            var clickedLink = e.target;
+            activeLink = clickedLink.itemID;
+            
+            changePosition(clickedLink);
+        }
+		
+        function removeActiveLinks() {
+            for (var i = 0; i < links.length; i++) {
+                links[i].classList.remove("active");
+            }
+        }
+        
+       
+		function changePosition(link) {
+        	var position = link.getAttribute("data-pos");
+            wrapper.style.left = position;
+            
+            link.classList.add("active");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="./css/stylesheet.css">
+
+<title>Home</title>
+
+</head>
+
+<body>
+
+        <div class="homediv">
+            <div id="headerdiv">
+                <ul><li><a href="#null" onclick="javascript:history.back();">
+                            <img src="images/vorige.png" class="home" alt="home">
+                        </a></li>
+                    <li><a href="index.html"><img src="images/img2.png" class="home" alt="home"></a></li>
+                    
+                    <li><a href="#null" onclick="javascript:history.forward();">
+                            <img src="images/volgende.png" class="home" alt="home">
+                        </a></li>
+                </ul>
+            </div>
+			<div class="wrapper2">
+  <nav class="vertical">
+    <ul>
+      <li>
+        <a href="#">Wat is een trauma?</a>
+          </li>
+					<li>
+        <a href="pscyho.html">wat is PTSS?</a>
+          </li>
+					<li>
+   <a href="pscyho-behandeling.html">Behandeling van PTSS</a>
+				
+          </li>
+      <li>
+        <a href="pscyho-vvb.html">Vechten, Vluchten, Bevriezen </a>
+        
+      </li>
+     <li>
+        <a href="pscyho-alexander.html">Het verhaal van Alexander</a>
+       
+      </li>
+      <li>
+        <a href="pscyho-bruiloft.html">De bruiloft</a>
+       
+      </li>
+    </ul>
+  </nav>
+  </div>
+<div id="contentContainer">
+        <div id="wrapper">
+            <div id="itemOne" class="content">
+              
+<span><h3>Wat is een trauma?</h3>
+
+<p>Psycho-educatie over wat een trauma is en welke soorten trauma er zijn.</p>
+
+
+</span>
+
+            </div>
+            <div id="itemOne" class="content">
+               <span>
+							<p>Trauma betekent eigenlijk: wond.</p>
+
+
+ 
+
+
+Het is een emotionele beschadiging die is ontstaan na het meemaken van een schokkende gebeurtenis. 
+Als het verwerken van een dergelijke gebeurtenis niet goed lukt, blijven er klachten bestaan die het dagelijks leven verstoren.
+<img src="images/t1.png" >
+
+
+<p>
+Er bestaan twee soorten trauma
+</p>
+
+							 </span>
+            </div>
+            <div id="itemOne" class="content"> 
+<span>               
+<h3>Acuut</h3>
+<p>Een onverwachte, schokkende gebeurtenis, bijvoorbeeld een auto-ongeluk</p>
+<h3>Chronisch</h3>
+<p>Schokkende gebeurtenissen die veel langer duren, 
+bijvoorbeeld misbruik of oorlogsgeweld
+</p>
+</span>
+            </div>
+            <div id="itemOne" class="content">
+               
+
+<span><p> Een voorbeeld van een chronisch trauma is kindermishandeling.</p>
+</span><p> <object data="https://www.youtube.com/embed/GoWQB57mOl0" width="600" height="335"></object></p>
+
+            </div>
+						<div id="itemOne" class="content">
+						
+						<span><p>Wanneer iemand bang is na een auto ongeluk is dat een normale reactie op iets schokkends. Je hebt ook tijd nodig om het te verwerken en bij te komen.
+
+
+
+Als de verwerking te lang duurt of helemaal niet lukt, heb je misschien een trauma.
+                                                    </p><br></br><img src="images/t2.jpg" width="30%" height="50%">
+						</span>
+						</div>
+			
+					
+        </div>
+    </div>
+<div id="navLinks">
+    <ul>
+    <li class="itemLinks" data-pos="0px"></li>
+        <li class="itemLinks" data-pos="-675px"></li>
+        <li class="itemLinks" data-pos="-1350px"></li>
+        <li class="itemLinks" data-pos="-2025px"></li>
+				<li class="itemLinks" data-pos="-2700px"></li>
+				
+		
+				
+    </ul>
+</div>
+</div>
+ 
+    
+    <script>
+    	
+        var links = document.querySelectorAll(".itemLinks");
+        var wrapper = document.querySelector("#wrapper");
+        
+       
+        var activeLink = 0;
+        
+      
+        for (var i = 0; i < links.length; i++) {
+            var link = links[i];
+            link.addEventListener('click', setClickedItem, false);
+            
+           
+            link.itemID = i;
+        }
+
+    
+        links[activeLink].classList.add("active");
+
+        function setClickedItem(e) {
+            removeActiveLinks();
+
+            var clickedLink = e.target;
+            activeLink = clickedLink.itemID;
+            
+            changePosition(clickedLink);
+        }
+		
+        function removeActiveLinks() {
+            for (var i = 0; i < links.length; i++) {
+                links[i].classList.remove("active");
+            }
+        }
+        
+       
+		function changePosition(link) {
+        	var position = link.getAttribute("data-pos");
+            wrapper.style.left = position;
+            
+            link.classList.add("active");
+        }
+    </script>
+</body>
+
+</html>

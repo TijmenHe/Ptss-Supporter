@@ -1,0 +1,140 @@
+﻿<html>
+
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="./css/stylesheet.css">
+
+        <title>Home</title>
+
+    </head>
+
+    <body>
+        <div class="homediv">
+            <div id="headerdiv">
+                <ul><li><a href="#null" onclick="javascript:history.back();">
+                            <img src="images/vorige.png" class="home" alt="home">
+                        </a></li>
+                    <li><a href="index.html"><img src="images/img2.png" class="home" alt="home"></a></li>
+                    
+                    <li><a href="#null" onclick="javascript:history.forward();">
+                            <img src="images/volgende.png" class="home" alt="home">
+                        </a></li>
+                </ul>
+            </div>
+ 
+            <div class="wrapper2">
+  <nav class="vertical">
+    <ul>
+      <li>
+        <a href="ontspanningsoefening.html">Ontspanningsoefening</a>
+          </li>
+          <li><a href="yoga.html">Yoga</a>
+          <div>
+                                <ul>
+                                  <li>
+        <a href="focusenevenwicht.html">Focus en evenwicht</a>
+          </li>
+					<li>
+        <a href="rekkenenstrekken.html">Rekken en strekken</a>
+	
+            <li><a href="rustigworden.html">Rustig worden</a></li>
+ 
+      <li>
+        <a href="ademhalen.html">Ademhalen</a>
+        
+      </li>
+                                </ul>
+                    
+		     </div>	</li>		
+    </ul>
+    </div>
+            <div id="contentContainer">
+                <div id="wrapper">
+                    <div id="itemOne" class="content">
+
+                        <span><h3>De boot</h3>
+                            <p align="left"> 
+                                1.	Ga met rechte rug op een matje zitten.</br>&nbsp;&nbsp;  Zet je voeten plat op de grond en </br>&nbsp;&nbsp;  sla je armen om je knieën.</br></br>
+                                2.	Leun naar achteren en zet je handen </br>&nbsp;&nbsp;  achter je op de grond.</br></br>
+                                3.	Spits je tenen en breng je benen omhoog.</br></br>
+                                4.	Strek je armen naar voren en bewaar je</br>&nbsp;&nbsp; evenwicht.
+                            <div class="bootdiv"> <img src="images/boot.jpg"  alt="boot"></div>
+                             
+                            </p>
+                         
+                           
+                        </span>
+
+                    </div>
+                    <div id="itemOne" class="content">
+                        <span>
+                            <h3>Het vliegtuig</h3>
+                           <p align="left"> 
+                            1.	Ga staan en maak je lang.</br></br>
+                            2.	Op een inademing strek je een</br>&nbsp;&nbsp; been naar achteren uit.</br></br>
+                            3.	Concentreer je op je ademhaling</br>&nbsp;&nbsp; en hoe je daar rustig van wordt.</br></br>
+                            4.	Strek je armen uit naar opzij</br>&nbsp;&nbsp;als de vleugels van een vliegtuig.
+                           <div class="vliegtuigdiv"><img src="images/vliegtuig.jpg"  alt="hetvliegtuig" ></div>
+                            </p>
+                           
+</div>
+                        </span>
+                    
+</div></div>
+                    <div id="navLinks">
+                        <ul>
+                            <li class="itemLinks" data-pos="0px"></li>
+                            <li class="itemLinks" data-pos="-675px"></li>
+                   
+
+                        </ul>
+                    </div>
+                     </div>
+
+
+                <script>
+
+                    var links = document.querySelectorAll(".itemLinks");
+                    var wrapper = document.querySelector("#wrapper");
+
+
+                    var activeLink = 0;
+
+
+                    for (var i = 0; i < links.length; i++) {
+                        var link = links[i];
+                        link.addEventListener('click', setClickedItem, false);
+
+
+                        link.itemID = i;
+                    }
+
+
+                    links[activeLink].classList.add("active");
+
+                    function setClickedItem(e) {
+                        removeActiveLinks();
+
+                        var clickedLink = e.target;
+                        activeLink = clickedLink.itemID;
+
+                        changePosition(clickedLink);
+                    }
+
+                    function removeActiveLinks() {
+                        for (var i = 0; i < links.length; i++) {
+                            links[i].classList.remove("active");
+                        }
+                    }
+
+
+                    function changePosition(link) {
+                        var position = link.getAttribute("data-pos");
+                        wrapper.style.left = position;
+
+                        link.classList.add("active");
+                    }
+                </script>
+                </body>
+                </html>

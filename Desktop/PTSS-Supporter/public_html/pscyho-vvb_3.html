@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="./css/stylesheet.css">
+
+<title>Home</title>
+
+</head>
+
+<body>
+
+        <div class="homediv">
+            <div id="headerdiv">
+                <ul><li><a href="#null" onclick="javascript:history.back();">
+                            <img src="images/vorige.png" class="home" alt="home">
+                        </a></li>
+                    <li><a href="index.html"><img src="images/img2.png" class="home" alt="home"></a></li>
+                    
+                    <li><a href="#null" onclick="javascript:history.forward();">
+                            <img src="images/volgende.png" class="home" alt="home">
+                        </a></li>
+                </ul>
+            </div>
+			<div class="wrapper2">
+  <nav class="vertical">
+    <ul>
+      <li>
+        <a href="pscyho-trauma.html">Wat is een trauma?</a>
+          </li>
+					<li>
+        <a href="pscyho.html">wat is PTSS?</a>
+          </li>
+					<li>
+        <a href="pscyho-behandeling.html">Behandeling van PTSS</a>
+				
+          </li>
+           <li>
+                            <a href="pscyho-vvb.html">Vechten, Vluchten, Bevriezen </a>
+<div>
+                                <ul>
+                                    <li><a href="pscyho-vvb_1.html">Deel 1</a></li>
+                                    <li><a href="pscyho-vvb_2.html">Deel 2</a></li>
+                                    <li><a href="pscyho-vvb_3.html">Deel 3</a></li>
+                                </ul>
+                            </div>
+                        </li>
+    <li>
+        <a href="pscyho-alexander.html">Het verhaal van Alexander</a>
+       
+      </li>
+      <li>
+        <a href="pscyho-bruiloft.html">De bruiloft</a>
+       
+      </li>
+    </ul>
+  </nav>
+  </div>
+<div id="contentContainer">
+        <div id="wrapper">
+            <div id="itemOne" class="content">
+              
+<span>
+
+<p>
+
+
+Maar als mama boos wordt en de televisie uitzet, dan loopt het lijntje verder omhoog en verder en word je heel boos. Dan gaat het lijntje buiten het raampje
+ </p>
+
+
+</span>
+
+            </div>
+            <div id="itemOne" class="content">
+            <span>
+							<p> 
+
+Dan is de stress te hoog en gaat je mensenbrein uit
+</p>
+
+
+
+							 </span>
+            </div>
+            <div id="itemOne" class="content">
+<span>        
+    <p>
+
+
+Dan werken alleen nog je zoogdierenbrein en je reptielenbrein en dan gaat automatisch de instinctreactie in werking. Het mensenbrein is dan uit en dat betekent dat je dus niet meer goed kunt nadenken of overleggen. Je handelt meteen vanuit je instinct. Dat is zo in onze hersenen geprogrammeerd. Wanneer er gevaar dreigt en je gaat rustig nadenken en overleggen, dan breng je jezelf nog meer in gevaar
+    </p>
+</span>
+            </div>
+            <div id="itemOne" class="content">
+              
+
+<span> 
+<p>
+Nu is het zo dat kinderen die veel nare dingen hebben meegemaakt een veel kleiner raampje hebben dan andere kinderen. 
+ </p>
+</span>
+
+            </div>
+						<div id="itemOne" class="content">
+					
+						<span>
+
+De onderlijn van het raampje is dan veel hoger, omdat er nog stress of gevoel van gevaar is van vroeger. Je hebt dan chronische stress. 
+
+						</span>
+						</div>
+						<div id="itemOne" class="content">
+					
+						<span>
+
+
+<p>Dus ook als je televisie kijkt, ben je al bijna bovenaan in je raampje. Je hebt dan maar een klein beetje stress nodig om buiten je raampje te gaan
+</p></span>
+						</div>
+					
+        </div>
+    </div>
+<div id="navLinks">
+    <ul>
+   <li class="itemLinks" data-pos="0px"></li>
+        <li class="itemLinks" data-pos="-675px"></li>
+        <li class="itemLinks" data-pos="-1350px"></li>
+        <li class="itemLinks" data-pos="-2025px"></li>
+				<li class="itemLinks" data-pos="-2700px"></li>
+				<li class="itemLinks" data-pos="-3375px"></li>
+    </ul>
+</div>
+</div>
+ 
+    
+    <script>
+    	
+        var links = document.querySelectorAll(".itemLinks");
+        var wrapper = document.querySelector("#wrapper");
+        
+       
+        var activeLink = 0;
+        
+      
+        for (var i = 0; i < links.length; i++) {
+            var link = links[i];
+            link.addEventListener('click', setClickedItem, false);
+            
+           
+            link.itemID = i;
+        }
+
+    
+        links[activeLink].classList.add("active");
+
+        function setClickedItem(e) {
+            removeActiveLinks();
+
+            var clickedLink = e.target;
+            activeLink = clickedLink.itemID;
+            
+            changePosition(clickedLink);
+        }
+		
+        function removeActiveLinks() {
+            for (var i = 0; i < links.length; i++) {
+                links[i].classList.remove("active");
+            }
+        }
+        
+       
+		function changePosition(link) {
+        	var position = link.getAttribute("data-pos");
+            wrapper.style.left = position;
+            
+            link.classList.add("active");
+        }
+    </script>
+</body>
+
+</html>

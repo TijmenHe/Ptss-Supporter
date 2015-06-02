@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="./css/stylesheet.css">
+
+        <title>Home</title>
+
+    </head>
+
+    <body>
+        <div class="homediv">
+            <div id="headerdiv">
+                <ul><li><a href="#null" onclick="javascript:history.back();">
+                            <img src="images/vorige.png" class="home" alt="home">
+                        </a></li>
+                    <li><a href="index.html"><img src="images/img2.png" class="home" alt="home"></a></li>
+                    
+                    <li><a href="#null" onclick="javascript:history.forward();">
+                            <img src="images/volgende.png" class="home" alt="home">
+                        </a></li>
+                </ul>
+            </div>
+            <div class="wrapper2">
+                <nav class="vertical">
+                    <ul>
+                        <li>
+                            <a href="pscyho-trauma.html">Wat is een trauma?</a>
+                        </li>
+                        <li>
+                            <a href="pscyho.html">wat is PTSS?</a>
+                        </li>
+                        <li>
+                            <a href="pscyho-behandeling.html">Behandeling van PTSS</a>
+                          
+                        </li>
+                        <li>
+        <a href="pscyho-vvb.html">Vechten, Vluchten, Bevriezen </a>
+        
+      </li>
+                        <li>
+                            <a href="pscyho-alexander.html">Het verhaal van Alexander</a>
+
+                        </li>
+                        <li>
+                            <a href="pscyho-bruiloft.html">De bruiloft</a>
+
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="contentContainer">
+                <div id="wrapper">
+                    <div id="itemOne" class="content">
+
+                        <span><h3>Wat is PTSS?</h3>
+
+                            <p>Psycho-educatie over posttraumatische stressstoornis</p>
+
+
+                        </span>
+
+                    </div>
+                    <div id="itemOne" class="content">
+                        <span>
+                            <p> Na het meemaken van iets ingrijpends kan er sprake zijn van een posttraumatische stressstoornis. </p>
+
+
+                            <p>Dit noemen we ook wel PTSS. </p>
+
+                            <p>Misschien heb je hier wel eens over gehoord in de klas of op TV.</p>
+                            <p>De oorzaak van PTSS is vaak een ingrijpende gebeurtenis. 
+                                Deze kan je zelf hebben meegemaakt of hebben gezien, zoals bijvoorbeeld getuige zijn van een schietpartij.
+                                Ook getuige zijn van een gebeurtenis kan leiden tot een PTSS.
+                            </p>
+                        </span>
+                    </div>
+                    <div id="itemOne" class="content">
+                        <span>     <p>  <h3>  PTSS bestaat uit drie symptomen:</h3>
+                            <p>
+<h4>Herbeleving</h4>
+              </p>          <p>          
+<h4>Vermijding</h4>
+                  </p>      <p>              
+<h4>Verhoogde prikkelbaarheid</h4>
+                              </p>  </p>   <img src="images/p1.png" width="30%" height="50%" class="box1"> 
+                        </span>
+                    </div>
+                    <div id="itemOne" class="content">
+                        <h3>Herbeleving</h3>
+                        <p style="float: left;"></p> <img src="images/p2.jpg" width="30%" height="50%" ALIGN="LEFT"> 
+                        <span> Herbeleving is dat herinneringen aan het trauma zich opnieuw gaan afspelen in je hoofd. Ook kan het voelen alsof het trauma opnieuw aan het gebeuren is.  
+                            <p>Je kan er ook nachtmerries over krijgen. </p><img src="images/p3.jpg" width="30%" height="50%">
+                        </span>
+
+                    </div>
+                    <div id="itemOne" class="content">
+                        <h3>Vermijding</h3>
+                        <span>Vermijding betekent dat je gedachten, gevoelens of gesprekken gaat vermijden die je doen denken aan het trauma. 
+                            Het kan ook zijn dat je het trauma niet kan herinneren omdat je er liever niet aan wil denken.
+                        </span><p></p><img src="images/p4.jpg" width="30%" height="50%" ALIGN="TEXTTOP"> 
+                    </div>
+                    <div id="itemOne" class="content">
+                        <h3>Verhoogde Prikkelbaarheid</h3>
+                        <span>Verhoogde prikkelbaarheid bestaat uit heel veel dingen:
+                            <br>
+
+                            Moeite met slapen <br>
+                             Prikkelbaarheid <br>
+                            Woede-uitbarstingen <br>
+                             Moeite met concentreren <br>
+                            Snel schrikken<br> <img src="images/p5.jpg" width="30%" height="50%" ALIGN="ABSMIDDLE"> 
+
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+            <div id="navLinks">
+                <ul>
+                    <li class="itemLinks" data-pos="0px"></li>
+                    <li class="itemLinks" data-pos="-675px"></li>
+                    <li class="itemLinks" data-pos="-1350px"></li>
+                    <li class="itemLinks" data-pos="-2025px"></li>
+                    <li class="itemLinks" data-pos="-2700px"></li>
+                    <li class="itemLinks" data-pos="-3375px"></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <script>
+
+            var links = document.querySelectorAll(".itemLinks");
+            var wrapper = document.querySelector("#wrapper");
+
+
+            var activeLink = 0;
+
+
+            for (var i = 0; i < links.length; i++) {
+                var link = links[i];
+                link.addEventListener('click', setClickedItem, false);
+
+
+                link.itemID = i;
+            }
+
+
+            links[activeLink].classList.add("active");
+
+            function setClickedItem(e) {
+                removeActiveLinks();
+
+                var clickedLink = e.target;
+                activeLink = clickedLink.itemID;
+
+                changePosition(clickedLink);
+            }
+
+            function removeActiveLinks() {
+                for (var i = 0; i < links.length; i++) {
+                    links[i].classList.remove("active");
+                }
+            }
+
+
+            function changePosition(link) {
+                var position = link.getAttribute("data-pos");
+                wrapper.style.left = position;
+
+                link.classList.add("active");
+            }
+        </script>
+    </body>
+
+</html>

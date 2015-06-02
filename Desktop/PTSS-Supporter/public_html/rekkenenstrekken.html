@@ -1,0 +1,142 @@
+﻿<html>
+
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="./css/stylesheet.css">
+
+        <title>Home</title>
+
+    </head>
+
+    <body>
+        <div class="homediv">
+            <div id="headerdiv">
+                <ul><li><a href="#null" onclick="javascript:history.back();">
+                            <img src="images/vorige.png" class="home" alt="home">
+                        </a></li>
+                    <li><a href="index.html"><img src="images/img2.png" class="home" alt="home"></a></li>
+                    
+                    <li><a href="#null" onclick="javascript:history.forward();">
+                            <img src="images/volgende.png" class="home" alt="home">
+                        </a></li>
+                </ul>
+            </div>
+            <div class="wrapper2">
+  <nav class="vertical">
+    <ul>
+      <li>
+        <a href="ontspanningsoefening.html">Ontspanningsoefening</a>
+          </li>
+          <li><a href="yoga.html">Yoga</a>
+          <div>
+                                <ul>
+                                  <li>
+        <a href="focusenevenwicht.html">Focus en evenwicht</a>
+          </li>
+					<li>
+        <a href="rekkenenstrekken.html">Rekken en strekken</a>
+	
+            <li><a href="rustigworden.html">Rustig worden</a></li>
+ 
+      <li>
+        <a href="ademhalen.html">Ademhalen</a>
+        
+      </li>
+                                </ul>
+                    
+		     </div>	</li>		
+    </ul>
+    </div>
+            <div id="contentContainer">
+                <div id="wrapper">
+                    <div id="itemOne" class="content">
+
+                        <span><h3>De lappenpop</h3>
+                            </br></br>
+                             
+                            <p align="left"> 
+                                1.	Ga rechtop staan en maak je lang.</br></br>
+                                2.	Buig voorover vanuit je heupen en </br> &nbsp;&nbsp;houd je gewicht op beide voeten.</br></br>
+                                3.	Laat je armen losjes nar beneden hangen.
+
+                            <div class="delappenpopdiv"> <img src="images/delappenpop.jpg"  alt="boot"></div>
+
+                            </p>
+
+
+                        </span>
+
+                    </div>
+                    <div id="itemOne" class="content">
+                        <span>
+                            <h3>De hond</h3>
+                            <p align="left"> 
+                                
+                                1.	Ga op je knieën zitten met je handen plat op de grond.</br></br>
+                                2.	Op een uitademing zet je je tenen op de </br> &nbsp;&nbsp;grond en beweeg je je heupen en billen omhoog.</br></br>
+                                3.	Strek je benen.</br></br>
+                                4.	Rek uit door je gewicht op je hielen te plaatsen</br> &nbsp;&nbsp; en je armen en benen uit te strekken.</br> &nbsp;&nbsp; Je lichaam heeft nu de vorm van een driehoek.
+                            <div class="dehonddiv"> <img src="images/dehond.jpg"  alt="dehond" ></div>
+                            </p>
+
+                    </div>
+                    </span>
+
+                </div></div>
+            <div id="navLinks">
+                <ul>
+                    <li class="itemLinks" data-pos="0px"></li>
+                    <li class="itemLinks" data-pos="-675px"></li>
+
+
+                </ul>
+            </div>
+        </div>
+
+
+        <script>
+
+            var links = document.querySelectorAll(".itemLinks");
+            var wrapper = document.querySelector("#wrapper");
+
+
+            var activeLink = 0;
+
+
+            for (var i = 0; i < links.length; i++) {
+                var link = links[i];
+                link.addEventListener('click', setClickedItem, false);
+
+
+                link.itemID = i;
+            }
+
+
+            links[activeLink].classList.add("active");
+
+            function setClickedItem(e) {
+                removeActiveLinks();
+
+                var clickedLink = e.target;
+                activeLink = clickedLink.itemID;
+
+                changePosition(clickedLink);
+            }
+
+            function removeActiveLinks() {
+                for (var i = 0; i < links.length; i++) {
+                    links[i].classList.remove("active");
+                }
+            }
+
+
+            function changePosition(link) {
+                var position = link.getAttribute("data-pos");
+                wrapper.style.left = position;
+
+                link.classList.add("active");
+            }
+        </script>
+    </body>
+</html>

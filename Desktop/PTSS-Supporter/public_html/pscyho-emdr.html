@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html>
+
+
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="./css/stylesheet.css">
+
+<title>Home</title>
+
+</head>
+
+<body>
+
+        <div class="homediv">
+            <div id="headerdiv">
+                <ul><li><a href="#null" onclick="javascript:history.back();">
+                            <img src="images/vorige.png" class="home" alt="home">
+                        </a></li>
+                    <li><a href="index.html"><img src="images/img2.png" class="home" alt="home"></a></li>
+                    
+                    <li><a href="#null" onclick="javascript:history.forward();">
+                            <img src="images/volgende.png" class="home" alt="home">
+                        </a></li>
+                </ul>
+            </div>
+			<div class="wrapper2">
+  <nav class="vertical">
+    <ul>
+      <li>
+        <a href="#">Wat is een trauma?</a>
+          </li>
+					<li>
+        <a href="pscyho.html">wat is PTSS?</a>
+          </li>
+					<li>
+      <a href="pscyho-behandeling.html">Behandeling van PTSS</a>
+				<div>
+          <ul>
+               <li><a href="pscyho-tfcbt.html">TF-CBT</a></li>
+             <li><a href="pscyho-emdr.html">EMDR</a></li>
+            
+          </ul>
+        </div>
+          </li>
+      <li>
+                            <a href="pscyho-vvb.html">Vechten, Vluchten, Bevriezen </a>
+
+                        </li>
+                     
+     <li>
+        <a href="pscyho-alexander.html">Het verhaal van Alexander</a>
+       
+      </li>
+      <li>
+        <a href="pscyho-bruiloft.html">De bruiloft</a>
+       
+      </li>
+    </ul>
+  </nav>
+  </div>
+<div id="contentContainer">
+        <div id="wrapper">
+            <div id="itemOne" class="content">
+              
+<span><h3>Wat is EMDR?</h3>
+
+<p>
+
+EMDR is een behandeling speciaal voor kinderen zoals jij. 
+Daarvoor ga je naar een therapeut. 
+Dat is en mevrouw of een meneer die je helpt, zodat je je straks weer fijn voelt. 
+EMDR werkt goed, dat weten we. Hoe snel het helpt, verschilt. 
+Als je één keer iets hebt meegemaakt ben je meestal sneller klaar dan een kind dat lange tijd is bedreigd of lastiggevallen. Dat is logisch. Maar ook dan kan EMDR je goed helpen. Veel kinderen zeggen achteraf dat ze het leuk vonden om te doen.
+ </p>
+
+
+</span>
+
+            </div>
+            <div id="itemOne" class="content">
+               <h3>Hier een filmpje over de ervaringen met EMDR</h3><span>
+
+<p> <object data="https://www.youtube.com/embed/3cSDtzfUe5M" width="600" height="335"></object></p>
+
+
+
+	</div>				
+        </div>
+    </div>
+<div id="navLinks">
+    <ul>
+   <li class="itemLinks" data-pos="0px"></li>
+        <li class="itemLinks" data-pos="-675px"></li>
+   
+    </ul>
+</div>
+
+ 
+    
+    <script>
+    	
+        var links = document.querySelectorAll(".itemLinks");
+        var wrapper = document.querySelector("#wrapper");
+        
+       
+        var activeLink = 0;
+        
+      
+        for (var i = 0; i < links.length; i++) {
+            var link = links[i];
+            link.addEventListener('click', setClickedItem, false);
+            
+           
+            link.itemID = i;
+        }
+
+    
+        links[activeLink].classList.add("active");
+
+        function setClickedItem(e) {
+            removeActiveLinks();
+
+            var clickedLink = e.target;
+            activeLink = clickedLink.itemID;
+            
+            changePosition(clickedLink);
+        }
+		
+        function removeActiveLinks() {
+            for (var i = 0; i < links.length; i++) {
+                links[i].classList.remove("active");
+            }
+        }
+        
+       
+		function changePosition(link) {
+        	var position = link.getAttribute("data-pos");
+            wrapper.style.left = position;
+            
+            link.classList.add("active");
+        }
+    </script>
+</body>
+
+</html>

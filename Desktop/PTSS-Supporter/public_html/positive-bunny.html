@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="./css/stylesheet.css">
+
+<title>Bunny</title>
+
+</head>
+
+<body>
+
+        <div class="homediv">
+            <div id="headerdiv">
+                <ul><li><a href="#null" onclick="javascript:history.back();">
+                            <img src="images/vorige.png" class="home" alt="home">
+                        </a></li>
+                    <li><a href="index.html"><img src="images/img2.png" class="home" alt="home"></a></li>
+                    
+                    <li><a href="#null" onclick="javascript:history.forward();">
+                            <img src="images/volgende.png" class="home" alt="home">
+                        </a></li>
+                </ul>
+            </div>
+    <div class="wrapper2">
+  <nav class="vertical">
+    <ul>
+      <li>
+        <a href="positive-bunny.html">Positive bunny posts</a>
+       </li>
+	  <li>
+        <a href="overtuigingen.html">Veel voorkomende overtuigingen</a>
+       </li>             
+      </ul>
+        
+    </nav>
+  </div>
+<div id="contentContainer">
+<div id="wrapper">
+            <div id="itemOne" class="content">
+              
+<span><h3>Positive bunny post</h3>
+
+<h2>Ik richt mijn energie op de dingen die mij lukken</h2>
+<img src="images/bunny.PNG" width="90" height="90" alt="bunny">
+
+</span>
+
+ </div>
+            <div id="itemOne" class="content">
+               <span>
+
+<h3>Positive bunny post</h3>
+
+<h2>Ik weet wat ik kan</h2>
+<img src="images/bunny.PNG" width="90" height="90" alt="bunny">
+							 </span>
+            </div>
+            <div id="itemOne" class="content"> 
+<span>               
+<h3>Positive bunny post</h3>
+
+<h2>Ik gun mezelf regelmatig rustmomenten</h2>
+<img src="images/bunny.PNG" width="90" height="90" alt="bunny">
+</span>
+            </div>
+            <div id="itemOne" class="content">
+               
+
+<span>
+    <h3>Positive bunny post</h3>
+
+<h2>Ik weet wat goed voor mij is en handel daar ook naar</h2>
+<img src="images/bunny.PNG" width="90" height="90" alt="bunny">
+</span>
+
+            </div>
+<div id="itemOne" class="content">
+						
+<span>
+    <h3>Positive bunny post</h3>
+    
+
+<h2>Ik wens anderen alleen het goede toe</h2>
+<img src="images/bunny.PNG" width="90" height="90" alt="bunny">
+						</span>
+						</div>
+			
+					
+        
+        <div id="itemOne" class="content">
+                <span>
+
+            <h3>Positive bunny post</h3>
+            <h2>Ik ben helemaal in het hier en nu</h2>
+            <img src="images/bunny.PNG" width="90" height="90" alt="bunny">
+		</span>    
+    </div>
+            <div id="itemOne" class="content">
+                <span>
+
+            <h3>Positive bunny post</h3>
+            <h2>Ik ben blij met elke stap voorwaarts</h2>
+            <img src="images/bunny.PNG" width="90" height="90" alt="bunny">
+		</span>    
+    </div>
+                <div id="itemOne" class="content">
+                <span>
+
+            <h3>Positive bunny post</h3>
+            <h2>Ik ben rustig en beheerst</h2>
+            <img src="images/bunny.PNG" width="90" height="90" alt="bunny">
+		</span>    
+    </div>
+    </div>
+</div>
+<div id="navLinks">
+    <ul>
+    <li class="itemLinks" data-pos="0px"></li>
+        <li class="itemLinks" data-pos="-675px"></li>
+        <li class="itemLinks" data-pos="-1350px"></li>
+        <li class="itemLinks" data-pos="-2025px"></li>
+	<li class="itemLinks" data-pos="-2700px"></li>
+        <li class="itemLinks" data-pos="-3375px"></li>
+        <li class="itemLinks" data-pos="-4050px"></li>
+        <li class="itemLinks" data-pos="-4725px"></li>
+				
+		
+				
+    </ul>
+</div>
+</div>
+ 
+    
+    <script>
+    	
+        var links = document.querySelectorAll(".itemLinks");
+        var wrapper = document.querySelector("#wrapper");
+        
+       
+        var activeLink = 0;
+        
+      
+        for (var i = 0; i < links.length; i++) {
+            var link = links[i];
+            link.addEventListener('click', setClickedItem, false);
+            
+           
+            link.itemID = i;
+        }
+
+    
+        links[activeLink].classList.add("active");
+
+        function setClickedItem(e) {
+            removeActiveLinks();
+
+            var clickedLink = e.target;
+            activeLink = clickedLink.itemID;
+            
+            changePosition(clickedLink);
+        }
+		
+        function removeActiveLinks() {
+            for (var i = 0; i < links.length; i++) {
+                links[i].classList.remove("active");
+            }
+        }
+        
+       
+		function changePosition(link) {
+        	var position = link.getAttribute("data-pos");
+            wrapper.style.left = position;
+            
+            link.classList.add("active");
+        }
+    </script>
+</body>
+
+</html>
