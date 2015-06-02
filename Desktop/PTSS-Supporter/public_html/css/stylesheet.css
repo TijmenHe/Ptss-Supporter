@@ -33,6 +33,7 @@ background-color:lightblue;
 width:100vw;
 height:100vh;
 text-align:center;
+z-index:1;
  }
  .topdiv{
 position:absolute;
@@ -40,30 +41,32 @@ background-color:lightblue;
 width:100vw;
 height:40vh;
 top:10vh;
+z-index:3;
   }
 .middlediv
 {
 position:absolute;
 background-color:lightblue;
 width:100vw;
-height:10vh;
-top:50vh;
+height:7vh;
+bottom:43vh;
 text-align:center;
 font-size: 3vmin;
-font-family: opensans;
+z-index: 2;
 }  
   .botdiv{
 position:absolute;
 background-color:lightblue;
 width:100vw;
-height:40vh;
-top:60vh;
+height:43vh;
+top:57vh;
+z-index: 1;
   } 
 .bigbuttons
 {
     position:relative;
     height:40vh;
-    width:42vw;
+    width:46vw;
     margin-top:2vh;
     margin-left:1vw;
     margin-right:1vw;
