@@ -12,8 +12,8 @@
 
 <body>
 
-        <div class="homediv">
-            <div id="headerdiv">
+    <div class="homediv">
+        <div id="headerdiv">
                 <ul><li><a href="#null" onclick="javascript:history.back();">
                             <img src="images/vorige.png" class="home" alt="home">
                         </a></li>
@@ -23,79 +23,36 @@
                             <img src="images/volgende.png" class="home" alt="home">
                         </a></li>
                 </ul>
-            </div>
+        </div>
     
-    <div class="wrapper2">
-  <nav class="vertical">
-    <ul>
-      <li>
-        <a href="positive-bunny.html">Positive bunny posts</a>
-       </li>
-	  <li>
-        <a href="overtuigingen.html">Veel voorkomende overtuigingen</a>
-       </li>         
-      </ul>
+        <div class="wrapper2">
+            <nav class="vertical">
+                <ul>
+                    <li>
+                        <a href="overtuigingen.html">vragenlijst voorkomende overtuigingen</a>
+                    </li>         
+                </ul>
+            </nav>
+        </div>
         
-    </nav>
-  </div>
-<div id="contentContainer">
-        <div id="wrapper">
-            <div id="itemOne" class="content">                      
-               <span>
-                   <h1>Welkom bij het onderdeel gedachten</h1>
-                   <p>Hier links kun je selecteren welk onderdeel je wilt bekijken<br><br>
-		Positive Bunny Posts zijn helpende gedachten die op momenten dat intense emoties worden ervaren ingezet kunnen worden.<br><br>
-		Bij veel voorkomende overtuigingen kun je aangeven of bepaalde stellingen op jou van toepassing zijn.</p>
-               </span>
+        <div id="contentContainer">
+            <div id="wrapper">
+                <div id="itemOne" class="content">                      
+                    <span>
+                        <h1>Welkom bij het onderdeel gedachten</h1>
+                        <p>Hier links kun je selecteren welk onderdeel je wilt bekijken<br><br>
+                           Bij veel voorkomende overtuigingen kun je aangeven of bepaalde stellingen op jou van toepassing zijn.</p>
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+        <div id="navLinks">
+        </div>
     </div>
-<div id="navLinks">
-</div>
-</div>
  
     
-    <script>
-    	
-        var links = document.querySelectorAll(".itemLinks");
-        var wrapper = document.querySelector("#wrapper");
-        
-        
-        var activeLink = 0;
-        
-        
-        for (var i = 0; i < links.length; i++) {
-            var link = links[i];
-            link.addEventListener('click', setClickedItem, false);
-            
-            
-            link.itemID = i;
-        }
 
-        
-        links[activeLink].classList.add("active");
-
-        function setClickedItem(e) {
-            removeActiveLinks();
-
-            var clickedLink = e.target;
-            activeLink = clickedLink.itemID;
-            
-            changePosition(clickedLink);
-        }
-		
-        function removeActiveLinks() {
-            for (var i = 0; i < links.length; i++) {
-                links[i].classList.remove("active");
-            }
-        }
-        
-       
-		function changePosition(link) {
-        	var position = link.getAttribute("data-pos");
-            wrapper.style.left = position;
-            
-            link.classList.add("active");
-        }
-    </script>
 </body>
 
 </html>
