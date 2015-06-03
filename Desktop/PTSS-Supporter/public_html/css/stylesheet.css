@@ -1,8 +1,9 @@
 body {
    margin:0;
-    padding:0;
-    width:100vw;
-    height:100vh;
+   padding:0;
+   width:100vw;
+   height:100vh;
+   overflow: hidden;
 }
 #headerdiv{
     position:absolute;
@@ -141,8 +142,8 @@ body {
     position:absolute;
     width: 60vw;
     height: 80vh;
-    top: 15vh;
-    left: 35vw;
+    top: 13vh;
+    left: 32vw;
     border: 4vh #56A5EC solid;
 		 -webkit-box-shadow: 2vh 2vh 2vh #87AFC7;
     -moz-box-shadow: 2vh 2vh 2vh #87AFC7;
@@ -153,7 +154,7 @@ body {
     width: 1200vw;
     position: relative;
     left: 0vw;
-		transition: left .5s ease-in-out;
+    transition: left .5s ease-in-out;
 }
 #navLinks {
     text-align: center;
@@ -220,7 +221,7 @@ div.wrapper2 {
 }
 
 nav.vertical {
-  border-radius: 4vmin;
+  border-radius: 2vmin;
   box-shadow: 0 0 1vh rgba(0,0,0,.15);
   overflow: hidden;
   text-align: center;
@@ -253,7 +254,7 @@ nav.vertical {
         font-weight: 500;
         height: 13vh;
         
-        letter-spacing: .3rem;
+
         line-height: 5vh;
         text-shadow: 0 1vh 1vh rgba(0,0,0,.1);
         text-transform: uppercase;
@@ -285,7 +286,7 @@ nav.vertical {
              color: #333331;
              display: block;
              font-size: 1.5vmin;
-             padding: 1vh 0;
+             
              text-decoration: none;
              transition: all 0.15s linear;
             }
@@ -293,10 +294,44 @@ nav.vertical {
               nav.vertical > ul > li > div > ul > li:hover > a {
                 background-color: lightBlue;
                 color: rgb(255,255,255);
-                padding: 1vh 0 1vh 5vh;
+              
               }
-                            
-
+              nav.menu{
+                display: block;
+                border-radius: 2vmin;
+  box-shadow: 0 0 1vh rgba(0,0,0,.15);
+  overflow: hidden;
+  text-align: center;
+      height: 90vh;
+      width:30vw;
+      background-color:lightblue;
+      
+              }                            
+              .menuItem{
+                  border-bottom: 1vh solid rgba(0,0,0,.05);
+                  display:inline-block;
+                  font-size:3.2vmin;
+                  padding-top: 3vh;
+                  height:10vh;
+                  text-decoration: none;
+                  color: rgb(255,255,255);
+                  border-radius: 2vmin;
+        margin-top:1vh;
+        text-shadow: 0 1vh 1vh rgba(0,0,0,.1);
+        text-transform: uppercase;
+        text-decoration:none;
+        
+                    background-color: rgb(157, 34, 60);
+                    background-image: -webkit-linear-gradient(135deg, rgb(0, 123, 228  ) , rgb( 92, 179, 255  ));
+                    background-image: -moz-linear-gradient(135deg, rgb(0, 123, 228  ), rgb( 92, 179, 255  ));
+                    background-image: -o-linear-gradient(135deg, rgb(0, 123, 228   ), rgb( 92, 179, 255  ));
+                    background-image: linear-gradient(135deg, rgb(0, 123, 228  ), rgb( 92, 179, 255  ));
+                    
+              }
+              .menuItem:hover{
+                background-color: lightBlue;
+                color: rgb(255,255,255);
+              }
 
 
 #clouds{
@@ -400,27 +435,6 @@ cloud:before, .cloud:after {
 	-o-animation: moveclouds 30s linear infinite;
 }
 
-@-webkit-keyframes moveclouds {
-	0vw {margin-left: 200vw;}
-	100vw {margin-left: -200vw;}
-}
-@-moz-keyframes moveclouds {
-	0vw {margin-left: 200vw;}
-	100vw {margin-left: -200vw;}
-}
-@-o-keyframes moveclouds {
-	0vw {margin-left: 200vw;}
-	100vw {margin-left: -200vw;}
-}
-
-
-body {
-	
-	overflow: hidden;
-}
-
-
-
 .shadow2
 {
     height:26vh;
@@ -481,4 +495,17 @@ top: 125px;
 position:absolute;
 left: 975px;
 top: 75px;
+}
+
+@-webkit-keyframes moveclouds {
+	0vw {margin-left: 200vw;}
+	100vw {margin-left: -200vw;}
+}
+@-moz-keyframes moveclouds {
+	0vw {margin-left: 200vw;}
+	100vw {margin-left: -200vw;}
+}
+@-o-keyframes moveclouds {
+	0vw {margin-left: 200vw;}
+	100vw {margin-left: -200vw;}
 }
