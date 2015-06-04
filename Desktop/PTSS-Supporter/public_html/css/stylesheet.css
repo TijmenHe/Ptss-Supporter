@@ -313,10 +313,11 @@ nav.vertical {
                   font-size:3.2vmin;
                   padding-top: 3vh;
                   height:10vh;
+                  width:30vw;
                   text-decoration: none;
                   color: rgb(255,255,255);
                   border-radius: 2vmin;
-        margin-top:1vh;
+        margin-top:.5vh;
         text-shadow: 0 1vh 1vh rgba(0,0,0,.1);
         text-transform: uppercase;
         text-decoration:none;
@@ -496,7 +497,13 @@ position:absolute;
 left: 975px;
 top: 75px;
 }
-
+textarea {
+    float:left;
+    margin-top:3vh;
+    margin-left:5vw;
+    width:50vw;
+    height:60vh;
+}
 @-webkit-keyframes moveclouds {
 	0vw {margin-left: 200vw;}
 	100vw {margin-left: -200vw;}
