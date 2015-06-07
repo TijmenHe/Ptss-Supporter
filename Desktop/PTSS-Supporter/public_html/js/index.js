@@ -1,7 +1,21 @@
 function messageEmotie() {
-alert("hoe jij je vandaag voelt staat nu in je dagboek, je wordt nu doorgestuurd naar de homepagina");
+alert("Hoe jij je vandaag voelt staat nu in je dagboek, je wordt nu doorgestuurd naar de homepagina.");
 }
-	
+
+function bunnyPost(){
+    var post = [
+    "Ik richt mijn energie op de dingen die mij lukken",
+    "Ik weet wat ik kan",
+    "Ik gun mezelf regelmatig rustmomenten",
+    "Ik weet wat goed voor mij is en handel daar ook naar",
+    "Ik wens anderen alleen het goede toe",
+    "Ik ben helemaal in het hier en nu",
+    "Ik ben blij met elke stap voorwaarts",
+    "Ik ben rustig en beheerst"];
+    x = Math.floor((Math.random() * 7));
+    
+    alert(post[x]);
+}	
         var links = document.querySelectorAll(".itemLinks");
         var wrapper = document.querySelector("#wrapper");
         
