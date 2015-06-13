@@ -3,49 +3,57 @@
 
 
 <head>
-<meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="./css/stylesheet.css">
-
-<title>Bunny</title>
-
+    <title>vragenlijst veel voorkomende overtuigingen</title>
+    <meta charset="UTF-8">
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquerys.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
 </head>
 
 <body>
 
-    <div class="homediv">
-        <div id="headerdiv">
-                <ul><li><a href="#null" onclick="javascript:history.back();">
-                            <img src="images/vorige.png" class="home" alt="home">
-                        </a></li>
-                    <li><a href="index.html"><img src="images/img2.png" class="home" alt="home"></a></li>
-                    
-                    <li><a href="#null" onclick="javascript:history.forward();">
-                            <img src="images/volgende.png" class="home" alt="home">
-                        </a></li>
-                </ul>
-        </div>
+<div class="homediv">
         
-        <div class="wrapper2">
-            <nav class="menu">
-                <a href="overtuigingen.html" class="menuItem" onclick="bunnyPost()">vragenlijst voorkomende overtuigingen</a> 
-               <a href="dagboek.html" class="menuItem">dagboek</a> 
-            </nav>
-        </div>
-<div id="contentContainer">
-<div id="wrapper">
-            <div id="itemOne" class="content">
-              
-<span><h2>Veelvoorkomende overtuigingen</h2>
+    <div id="headerdiv">
+        <ul>
+            <li>
+                <a href="#null" onclick="javascript:history.back();">
+                    <img src="images/vorige.png" class="home" alt="home">
+                </a>
+            </li>
+            <li>
+                <a href="index.html">
+                    <img src="images/img2.png" class="home" alt="home">
+                </a>
+            </li>
+            <li>
+                <a href="#null" onclick="javascript:history.forward();">
+                    <img src="images/volgende.png" class="home" alt="home">
+                </a>
+            </li>
+        </ul>
+    </div>
+        
+        <input class="ingeklaptbutton" type="image" src="images/inklap.jpg" alt="inklappen">
+        
+    <div class="navigatieingeklapt">
+        <nav class="menuIn">
+            <a href="gedachten-overtuigingen.html" class="menuitemIn" onclick="bunnyPost()">vragenlijst voorkomende overtuigingen</a> 
+            <a href="gedachten-dagboek.html" class="menuitemIn">dagboek</a>
+        </nav>
+    </div>
+ 
+        
+            
 
+        <div class="fluidHeightIn">
 <h3>We denken allemaal wel eens iets over onszelf. Er zijn veel gedachten die iedereen wel eens heeft. Geef bij elke gedachte aan hoe sterk je het eens bent met de volgende uitspraken</h3>
 <img src="images/denk.png" height="200" width="200" alt="denk goed na">
 
-</span>
-
- </div>
     <form>
-            <div id="itemOne" class="content">
-               <span>
+            
+               
 
 <h2>Het is belangrijk dat ik in alles wat ik doe, beter ben dan anderen</h2>
 <p align="left">
@@ -70,10 +78,6 @@
 <input type="radio" name="vraag1" value="10">10 (Geloof er heel sterk in)
 <br>
 </p>
-							 </span>
-            </div>
-            <div id="itemOne" class="content"> 
-<span>               
 
 
 <h2>Anderen zijn beter dan ik</h2>
@@ -100,12 +104,7 @@
 <br>
 </p>
 
-</span>
-            </div>
-            <div id="itemOne" class="content">
-               
 
-<span>
   
 
 <h2>Niemand houdt van mij</h2>
@@ -131,12 +130,7 @@
 <input type="radio" name="vraag3" value="10">10 (Geloof er heel sterk in)
 <br>
 </p>
-</span>
 
-            </div>
-<div id="itemOne" class="content">
-						
-<span>
         
 
 <h2>Het is belangrijk dat mijn ouders of verzorgers betrokken zijn bij alles wat ik doe</h2>
@@ -162,13 +156,6 @@
 <input type="radio" name="vraag4" value="10">10 (Geloof er heel sterk in)
 <br>
 </p>
-						</span>
-						</div>
-			
-					
-        
-        <div id="itemOne" class="content">
-                <span>
 
 
             <h2>Ik ben niet verantwoordelijk voor wat ik doe of zeg</h2>
@@ -194,12 +181,7 @@
 <input type="radio" name="vraag5" value="10">10 (Geloof er heel sterk in)
 <br>
 </p>
-		</span>    
-    </div>
-            <div id="itemOne" class="content">
-                <span>
-
-           
+   
             <h2>Ik ben een mislukkeling</h2>
                        <p align="left">
 <input type="radio" name="vraag6" value="1">1 (Geloof er eigenlijk helemaal niet in)
@@ -223,12 +205,7 @@
 <input type="radio" name="vraag6" value="10">10 (Geloof er heel sterk in)
 <br>
 </p>
-		</span>    
-    </div>
-                <div id="itemOne" class="content">
-                <span>
-
-          
+     
             <h2>Ik ben belangrijker of anders dan anderen</h2>
                                    <p align="left">
 <input type="radio" name="vraag7" value="1">1 (Geloof er eigenlijk helemaal niet in)
@@ -252,12 +229,7 @@
 <input type="radio" name="vraag7" value="10">10 (Geloof er heel sterk in)
 <br>
 </p>
-		</span>    
-    </div>
-                        <div id="itemOne" class="content">
-                <span>
-
-          
+      
             <h2>Niemand begrijpt me</h2>
                                    <p align="left">
 <input type="radio" name="vraag8" value="1">1 (Geloof er eigenlijk helemaal niet in)
@@ -281,12 +253,7 @@
 <input type="radio" name="vraag8" value="10">10 (Geloof er heel sterk in)
 <br>
 </p>
-		</span>    
-    </div>
-                                <div id="itemOne" class="content">
-                <span>
-
-          
+      
             <h2>De mensen waar ik van hou zijn er nooit voor me</h2>
                                    <p align="left">
 <input type="radio" name="vraag9" value="1">1 (Geloof er eigenlijk helemaal niet in)
@@ -310,12 +277,7 @@
 <input type="radio" name="vraag9" value="10">10 (Geloof er heel sterk in)
 <br>
 </p>
-		</span>    
-    </div>
-                                        <div id="itemOne" class="content">
-                <span>
-
-          
+       
             <h2>Anderen moeten me helpen, ik kan het niet alleen</h2>
                                    <p align="left">
 <input type="radio" name="vraag10" value="1">1 (Geloof er eigenlijk helemaal niet in)
@@ -339,13 +301,8 @@
 <input type="radio" name="vraag10" value="10">10 (Geloof er heel sterk in)
 <br>
 </p>
-		</span>    
-    </div>
-                                                <div id="itemOne" class="content">
-                <span>
 
-          
-            <h2>Ik heb altijd pech</h2>
+<h2>Ik heb altijd pech</h2>
                                    <p align="left">
 <input type="radio" name="vraag11" value="1">1 (Geloof er eigenlijk helemaal niet in)
 <br>
@@ -368,12 +325,7 @@
 <input type="radio" name="vraag11" value="10">10 (Geloof er heel sterk in)
 <br>
 </p>
-		</span>    
-    </div>
-                                                        <div id="itemOne" class="content">
-                <span>
-
-          
+     
             <h2>Als ik zeg wat ik eigenlijk wil zeggen worden anderen boos of verdrietig</h2>
                                    <p align="left">
 <input type="radio" name="vraag12" value="1">1 (Geloof er eigenlijk helemaal niet in)
@@ -397,10 +349,7 @@
 <input type="radio" name="vraag12" value="10">10 (Geloof er heel sterk in)
 <br>
 </p>
-		</span>    
-    </div>
-                                       <div id="itemOne" class="content">
-                <span>
+
                     <h2>Ik moet mijn gevoelens niet aan anderen laten zien</h2>
 
                                            <p align="left">
@@ -425,10 +374,7 @@
 <input type="radio" name="vraag13" value="10">10 (Geloof er heel sterk in)
 <br>
 </p>
-		</span>    
-    </div>
-                                               <div id="itemOne" class="content">
-                <span>
+
                     <h2>De wensen en ideeën van anderen zijn belangrijker dan die van mij</h2>
 
                                            <p align="left">
@@ -453,10 +399,7 @@
 <input type="radio" name="vraag14" value="10">10 (Geloof er heel sterk in)
 <br>
 </p>
-		</span>    
-                                               </div>
-                                                       <div id="itemOne" class="content">
-                <span>
+
                     <h2>Anderen willen me te pakken nemen of pijn doen</h2>
 
                                            <p align="left">
@@ -481,83 +424,15 @@
 <input type="radio" name="vraag15" value="10">10 (Geloof er heel sterk in)
 <br>
 </p>
-		</span>    
+   
                                                
         <br><input type="submit" value="Verstuur antwoorden">
-        </div>
+        
     </form>
-    </div>
-</div>
-<div id="navLinks">
-    <ul>
-    <li class="itemLinks" data-pos="0px"></li>
-        <li class="itemLinks" data-pos="-675px"></li>
-        <li class="itemLinks" data-pos="-1350px"></li>
-        <li class="itemLinks" data-pos="-2025px"></li>
-	<li class="itemLinks" data-pos="-2700px"></li>
-        <li class="itemLinks" data-pos="-3375px"></li>
-        <li class="itemLinks" data-pos="-4050px"></li>
-        <li class="itemLinks" data-pos="-4725px"></li>
-        <li class="itemLinks" data-pos="-4725px"></li>
-        <li class="itemLinks" data-pos="-5400px"></li>
-        <li class="itemLinks" data-pos="-6075px"></li>
-        <li class="itemLinks" data-pos="-6750px"></li>
-	<li class="itemLinks" data-pos="-7425px"></li>
-        <li class="itemLinks" data-pos="-8100px"></li>
-        <li class="itemLinks" data-pos="-8775px"></li>
-        <li class="itemLinks" data-pos="-9450px"></li>
-        <li class="itemLinks" data-pos="-10125px"></li>
-				
-		
-				
-    </ul>
-</div>
+        </div>   
+
 </div>
  
-    
-    <script>
-    	
-        var links = document.querySelectorAll(".itemLinks");
-        var wrapper = document.querySelector("#wrapper");
-        
-       
-        var activeLink = 0;
-        
-      
-        for (var i = 0; i < links.length; i++) {
-            var link = links[i];
-            link.addEventListener('click', setClickedItem, false);
-            
-           
-            link.itemID = i;
-        }
-
-    
-        links[activeLink].classList.add("active");
-
-        function setClickedItem(e) {
-            removeActiveLinks();
-
-            var clickedLink = e.target;
-            activeLink = clickedLink.itemID;
-            
-            changePosition(clickedLink);
-        }
-		
-        function removeActiveLinks() {
-            for (var i = 0; i < links.length; i++) {
-                links[i].classList.remove("active");
-            }
-        }
-        
-       
-		function changePosition(link) {
-        	var position = link.getAttribute("data-pos");
-            wrapper.style.left = position;
-            
-            link.classList.add("active");
-        }
-    </script>
 </body>
 
 </html>
