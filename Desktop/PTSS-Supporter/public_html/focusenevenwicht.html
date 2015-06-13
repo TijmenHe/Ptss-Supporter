@@ -24,19 +24,37 @@
             </div>
  
             <div class="wrapper2">
-                <nav class="menu">
-                    <a href="ontspanningsoefening.html" class="menuItem">Ontspanningsoefening</a>
-                    <a href="yoga.html" class="menuItem">Yoga</a>
-                    <a href="focusenevenwicht.html" class="menuItem">Focus en evenwicht</a>
-                    <a href="rekkenenstrekken.html" class="menuItem">Rekken en strekken</a>
-                    <a href="rustigworden.html" class="menuItem">Rustig worden</a>
-                    <a href="ademhalen.html" class="menuItem">Ademhalen</a>
-                </nav>
-            </div>
-            
-            <div id="contentContainer">
-                <div id="wrapper">
-                    <div id="itemOne" class="content">
+  <nav class="vertical">
+    <ul>
+      <li>
+        <a href="ontspanningsoefening.html">Ontspanningsoefening</a>
+          </li>
+          <li><a href="yoga.html">Yoga</a>
+          <div>
+                                <ul>
+                                  <li>
+        <a href="focusenevenwicht.html">Focus en evenwicht</a>
+          </li>
+					<li>
+        <a href="rekkenenstrekken.html">Rekken en strekken</a>
+	
+            <li><a href="rustigworden.html">Rustig worden</a></li>
+ 
+      <li>
+        <a href="ademhalen.html">Ademhalen</a>
+        
+      </li>
+                                </ul>
+                    
+		     </div>	</li>		
+    </ul>
+    </div>
+              <div class="fluidHeight">
+  <div class="sliderContainer">
+    <div class="iosSlider">
+      <div class="slider">
+          <div class="item item1">
+
 
                         <span><h3>De boot</h3>
                             <p align="left"> 
@@ -52,7 +70,7 @@
                         </span>
 
                     </div>
-                    <div id="itemOne" class="content">
+                        <div class="item item2">
                         <span>
                             <h3>Het vliegtuig</h3>
                            <p align="left"> 
@@ -66,60 +84,74 @@
 </div>
                         </span>
                     
-</div></div>
-                    <div id="navLinks">
-                        <ul>
-                            <li class="itemLinks" data-pos="0px"></li>
-                            <li class="itemLinks" data-pos="-675px"></li>
-                   
+  </div>
+            
+					
+        </div>
+    </div>
 
-                        </ul>
-                    </div>
-                     </div>
+</div>
+    
+<script type="text/javascript">
+$(document).ready(function() {
+  
+  $('.iosSlider').iosSlider({
+    desktopClickDrag: true,
+    snapToChildren: true,
+    navSlideSelector: '.sliderContainer .slideSelectors .item',
+    onSlideComplete: slideComplete,
+    onSliderLoaded: sliderLoaded,
+    onSlideChange: slideChange,
+    scrollbar: false,
+    autoSlide: false,
+    autoSlideTimer: 3300,
+    infiniteSlider: false
+  });
+  
+});
 
+function slideChange(args) {
+      
+  $('.sliderContainer .slideSelectors .item').removeClass('selected');
+  $('.sliderContainer .slideSelectors .item:eq(' + (args.currentSlideNumber - 1) + ')').addClass('selected');
 
-                <script>
+}
 
-                    var links = document.querySelectorAll(".itemLinks");
-                    var wrapper = document.querySelector("#wrapper");
+function slideComplete(args) {
+  
+  if(!args.slideChanged) return false;
+  
+  $(args.sliderObject).find('.text1, .text2').attr('style', '');
+  
+  $(args.currentSlideObject).find('.text1').animate({
+    right: '100px',
+    opacity: '0.8'
+  }, 400, 'easeOutQuint');
+  
+  $(args.currentSlideObject).find('.text2').delay(200).animate({
+    right: '70px',
+    opacity: '0.8'
+  }, 400, 'easeOutQuint');
+  
+}
 
-
-                    var activeLink = 0;
-
-
-                    for (var i = 0; i < links.length; i++) {
-                        var link = links[i];
-                        link.addEventListener('click', setClickedItem, false);
-
-
-                        link.itemID = i;
-                    }
-
-
-                    links[activeLink].classList.add("active");
-
-                    function setClickedItem(e) {
-                        removeActiveLinks();
-
-                        var clickedLink = e.target;
-                        activeLink = clickedLink.itemID;
-
-                        changePosition(clickedLink);
-                    }
-
-                    function removeActiveLinks() {
-                        for (var i = 0; i < links.length; i++) {
-                            links[i].classList.remove("active");
-                        }
-                    }
-
-
-                    function changePosition(link) {
-                        var position = link.getAttribute("data-pos");
-                        wrapper.style.left = position;
-
-                        link.classList.add("active");
-                    }
-                </script>
+function sliderLoaded(args) {
+    
+  $(args.sliderObject).find('.text1, .text2').attr('style', '');
+  
+  $(args.currentSlideObject).find('.text1').animate({
+    right: '100px',
+    opacity: '0.8'
+  }, 400, 'easeOutQuint');
+  
+  $(args.currentSlideObject).find('.text2').delay(200).animate({
+    right: '70px',
+    opacity: '0.8'
+  }, 400, 'easeOutQuint');
+  
+  slideChange(args);
+  
+}
+</script>
                 </body>
                 </html>

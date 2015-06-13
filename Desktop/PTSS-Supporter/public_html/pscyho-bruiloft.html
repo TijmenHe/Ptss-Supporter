@@ -7,7 +7,11 @@
 <link rel="stylesheet" type="text/css" href="./css/stylesheet.css">
 
 <title>Home</title>
-
+<script type="text/javascript" src=
+"https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+</script>
+ <script type="text/javascript" charset="utf-8" src="jquery.easing-1.3.js"></script>
+  <script type="text/javascript" charset="utf-8" src="jquery.iosslider.min.js"></script>
 </head>
 
 <body>
@@ -24,19 +28,39 @@
                         </a></li>
                 </ul>
             </div>
-            <div class="wrapper2">
-                <nav class="menu">
-                    <a href="pscyho-trauma.html" class="menuItem">Wat is een trauma?</a>
-                    <a href="pscyho-ptss.html" class="menuItem">wat is PTSS?</a>
-                    <a href="pscyho-behandeling.html" class="menuItem">Behandeling van PTSS</a>
-                    <a href="pscyho-vvb.html" class="menuItem">Vechten, Vluchten, Bevriezen </a>
-                    <a href="pscyho-alexander.html" class="menuItem" >Het verhaal van Alexander</a>
-                    <a href="pscyho-bruiloft.html" class="menuItem">De bruiloft</a>
-                </nav>
-            </div>
-<div id="contentContainer">
-        <div id="wrapper">
-            <div id="itemOne" class="content">
+			<div class="wrapper2">
+  <nav class="vertical">
+    <ul>
+      <li>
+        <a href="pscyho-trauma.html">Wat is een trauma?</a>
+          </li>
+					<li>
+        <a href="pscyho-ptss.html">wat is PTSS?</a>
+          </li>
+					<li>
+        <a href="pscyho-behandeling.html">Behandeling van PTSS</a>
+				
+          </li>
+      <li>
+        <a href="pscyho-vvb.html">Vechten, Vluchten, Bevriezen </a>
+        
+      </li>
+      <li>
+        <a href="pscyho-alexander.html">Het verhaal van Alexander</a>
+       
+      </li>
+      <li>
+        <a href="pscyho-bruiloft.html">De bruiloft</a>
+       
+      </li>
+    </ul>
+  </nav>
+  </div>
+<div class="fluidHeight">
+  <div class="sliderContainer">
+    <div class="iosSlider">
+      <div class="slider">
+          <div class="item item1">
               
 <span><h3>De bruiloft</h3>
     <p>
@@ -47,7 +71,7 @@ In dit geval een verhaal over een bruiloft. </p>
 </span>
 
             </div>
-            <div id="itemOne" class="content">
+             <div class="item item2">
                <span>
                    <br></br>	<p>
 
@@ -58,7 +82,7 @@ Aan het eind van een drukke bruiloftsdag gaat iedereen weg en blijft het paar sa
 
 							 </span>
             </div>
-                  <div id="itemOne" class="content" width="30%" height="40%">
+                  <div class="item item3">
                <span>
                    <br></br>	<p>
 
@@ -69,7 +93,7 @@ Doordat de dag te intensief is geweest om alle gebeurtenissen direct te verwerke
 
 							 </span>
             </div>
-                  <div id="itemOne" class="content">
+                <div class="item item4">
                <span>
                    <br></br>	<p>
 
@@ -79,7 +103,7 @@ Na een week of twee zien ze deze filmpjes niet meer. Ze hebben de dag ‘verwerk
 
 							 </span>
             </div>
-            <div id="itemOne" class="content">
+          <div class="item item5">
                <span>
                    <br></br>	<p>
             Bij een ingrijpende gebeurtenis gebeurt eigenlijk hetzelfde. 
@@ -89,7 +113,7 @@ Na een week of twee zien ze deze filmpjes niet meer. Ze hebben de dag ‘verwerk
 
 							 </span>
             </div>	
-                   <div id="itemOne" class="content">
+                <div class="item item6">
                <span>
                    <br></br>	<p>
         Nare gevoelens worden liever vermeden en daarom worden de filmpjes vroegtijdig gestopt.
@@ -97,66 +121,75 @@ Na een week of twee zien ze deze filmpjes niet meer. Ze hebben de dag ‘verwerk
 		</p><img src="images/16.jpg" >
 
 							 </span>
-            </div>
+	    </div>
+            
+					
         </div>
     </div>
-<div id="navLinks">
-    <ul>
-                <li class="itemLinks" data-pos="0px"></li>
-        <li class="itemLinks" data-pos="-675px"></li>
-        <li class="itemLinks" data-pos="-1350px"></li>
-        <li class="itemLinks" data-pos="-2025px"></li>
-				<li class="itemLinks" data-pos="-2700px"></li>
-				<li class="itemLinks" data-pos="-3375px"></li>
-     
-    </ul>
+
 </div>
-</div>
- 
     
-    <script>
-    	
-        var links = document.querySelectorAll(".itemLinks");
-        var wrapper = document.querySelector("#wrapper");
-        
-       
-        var activeLink = 0;
-        
+<script type="text/javascript">
+$(document).ready(function() {
+  
+  $('.iosSlider').iosSlider({
+    desktopClickDrag: true,
+    snapToChildren: true,
+    navSlideSelector: '.sliderContainer .slideSelectors .item',
+    onSlideComplete: slideComplete,
+    onSliderLoaded: sliderLoaded,
+    onSlideChange: slideChange,
+    scrollbar: false,
+    autoSlide: false,
+    autoSlideTimer: 3300,
+    infiniteSlider: false
+  });
+  
+});
+
+function slideChange(args) {
       
-        for (var i = 0; i < links.length; i++) {
-            var link = links[i];
-            link.addEventListener('click', setClickedItem, false);
-            
-           
-            link.itemID = i;
-        }
+  $('.sliderContainer .slideSelectors .item').removeClass('selected');
+  $('.sliderContainer .slideSelectors .item:eq(' + (args.currentSlideNumber - 1) + ')').addClass('selected');
 
+}
+
+function slideComplete(args) {
+  
+  if(!args.slideChanged) return false;
+  
+  $(args.sliderObject).find('.text1, .text2').attr('style', '');
+  
+  $(args.currentSlideObject).find('.text1').animate({
+    right: '100px',
+    opacity: '0.8'
+  }, 400, 'easeOutQuint');
+  
+  $(args.currentSlideObject).find('.text2').delay(200).animate({
+    right: '70px',
+    opacity: '0.8'
+  }, 400, 'easeOutQuint');
+  
+}
+
+function sliderLoaded(args) {
     
-        links[activeLink].classList.add("active");
-
-        function setClickedItem(e) {
-            removeActiveLinks();
-
-            var clickedLink = e.target;
-            activeLink = clickedLink.itemID;
-            
-            changePosition(clickedLink);
-        }
-		
-        function removeActiveLinks() {
-            for (var i = 0; i < links.length; i++) {
-                links[i].classList.remove("active");
-            }
-        }
-        
-       
-		function changePosition(link) {
-        	var position = link.getAttribute("data-pos");
-            wrapper.style.left = position;
-            
-            link.classList.add("active");
-        }
-    </script>
+  $(args.sliderObject).find('.text1, .text2').attr('style', '');
+  
+  $(args.currentSlideObject).find('.text1').animate({
+    right: '100px',
+    opacity: '0.8'
+  }, 400, 'easeOutQuint');
+  
+  $(args.currentSlideObject).find('.text2').delay(200).animate({
+    right: '70px',
+    opacity: '0.8'
+  }, 400, 'easeOutQuint');
+  
+  slideChange(args);
+  
+}
+</script>
 </body>
 
 </html>

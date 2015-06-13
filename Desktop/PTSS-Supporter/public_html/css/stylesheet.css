@@ -1,12 +1,10 @@
-/* body is schermvullend, niet meer, niet minder */
 body {
    margin:0;
    padding:0;
-   width:100vw;
-   height:100vh;
+   width:100%;
+   height:100%;
    overflow: hidden;
 }
-/*Div aan de bovenkant van het scherm met daarin de buttons voor vorige/volgende en home*/
 #headerdiv{
     position:absolute;
     background-color:#87AFC7;
@@ -15,19 +13,19 @@ body {
     text-align:center;
 
 }
-/* stijl van de buttons in de div */
 #headerdiv ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
     list-style-image: none;
 }
+
 #headerdiv li {
     display:inline-block;
     float:left;
     overflow:auto;  
 }
-/* Div gelijk aan grootte als de hele body, ingesteld als achtergrond met kleur */
+
 .homediv{
     position:absolute;
     background-color:lightblue;
@@ -36,7 +34,7 @@ body {
     text-align:center;
     z-index:1;
  }
- /* Divs boven, midden en onder op de paginas index.html en emotie.html */
+ 
  .topdiv{
     position:absolute;
     background-color:lightblue;
@@ -45,6 +43,7 @@ body {
     top:10vh;
     z-index:3;
 }
+  
 .middlediv
 {
     position:absolute;
@@ -56,7 +55,8 @@ body {
     font-size: 3vmin;
     z-index: 2;
 }  
-.botdiv{
+
+  .botdiv{
     position:absolute;
     background-color:lightblue;
     width:100vw;
@@ -64,7 +64,7 @@ body {
     top:57vh;
     z-index: 1;
 } 
- /* de buttons gebruikt op de paginas index.html en emotie.html */ 
+  
 .bigbuttons
 {
     position:relative;
@@ -83,19 +83,46 @@ body {
     box-shadow: 1vh 1vh 1vh 0vh rgba(135,173,199,1);
 }
 
+.push_button{
+    position:relative;
+    width:20vh;
+    color:#FFF;
+    display:block;
+    text-decoration:none;
+    margin-top:1vh ;
+    margin-right: 5vw;
+    margin-left: 5vw;
+    border-radius:1vh;
+    border:solid 1vh #6698FF;
+    background:#5CB3FF;
+    text-align:center;
+    padding:1vh 1vh;
+    -webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    transition: all 0.1s;
+    -webkit-box-shadow: 0vh 9vh 0vh #56A5EC;
+   -moz-box-shadow: 0vh 9vh 0vh #56A5EC;
+    box-shadow: 0vh 9vh 0vh #56A5EC;
+}
+
+.push_button:active{
+    -webkit-box-shadow: 0vh 2vh 0vh #56A5EC;
+    -moz-box-shadow: 0vh 2vh 0vh #56A5EC;
+    box-shadow: 0vh 2vh 0vh #56A5EC;
+    position:relative;
+    top:7vh;
+}
+
 .home{
-    margin-top:0vh;
-    margin-left:11vw;
-    margin-right:11vw;
-    width:10vw;
-    height:9vh;
-    /* kun jij hier een mooi 3d iets van maken? */
-    border-bottom: 1vh solid rgba(0,0,0,.05);
-    background-color: rgb(157, 34, 60);
-    background-image: -webkit-linear-gradient(135deg, rgb(0, 123, 228  ) , rgb( 92, 179, 255  ));
-    background-image: -moz-linear-gradient(135deg, rgb(0, 123, 228  ), rgb( 92, 179, 255  ));
-    background-image: -o-linear-gradient(135deg, rgb(0, 123, 228   ), rgb( 92, 179, 255  ));
-    background-image: linear-gradient(135deg, rgb(0, 123, 228  ), rgb( 92, 179, 255  ));
+       margin-top:0vh;
+       margin-left:11vw;
+       margin-right:11vw;
+       width:10vw;
+       height:10vh;
+}
+@-ms-viewport{
+  width: device-width;
+  height:device-height;
 }
 
 #itemOne {
@@ -129,10 +156,54 @@ body {
     left: 0vw;
     transition: left .5s ease-in-out;
 }
-
+#navLinks {
+    text-align: center;
+    width: 5vw;
+		margin-left: 3vw;
+                 
+}
+    #navLinks ul {
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        margin-top: 90vh;
+    }
+        #navLinks ul li {
+            float: left;
+            text-align: center;
+            margin: 1vh;
+            list-style: none;
+            cursor: pointer;
+            background-color: lightBlue;
+            padding: 1vh;
+            border-radius: 50vh;
+            border: #56A5EC 1vh solid;
+        }
+            #navLinks ul li:hover {
+                background-color: #99D0FF;
+            }
+            #navLinks ul li.active {
+                background-color: #99D0FF;
+                color: #FFFFFF;
+                outline-width: 1vh;
+            }
+                #navLinks ul li.active:hover {
+                    background-color: #99D0FF;
+                    color: #99D0FF;
+                }
+								
+								#navLinks ul li.active {
+    background-color: #5CB3FF;
+    color: #FFFFFF;
+    outline-width: 1vh;
+}
+#navLinks ul li.active:hover {
+    background-color: #484848;
+    color: #FFFFFF;
+}
 
 span{
-font-family:Cursive;font-size:2vmin;font-style:normal;font-weight:normal;text-decoration:none;text-transform:none;color:000000;
+font-family:Arial;font-size:3.5vmin;font-style:normal;font-weight:normal;text-decoration:none;text-transform:none;color: rgb(255,255,255);text-shadow: 0.2vmin 0.2vmin black;
 }
 
 textarea {
@@ -141,92 +212,130 @@ textarea {
 		 border: #56A5EC 1vh solid;
 }
 
-
-  /* button waarmee de linkernavigatiebalk mee kan worden in en uitgeschoven */
- .ingeklaptbutton{
-            position:absolute;
-            overflow:hidden;
-            left:0vw;
-            top:11vh;
-            width:7vw;
-            height:7vh;
-            z-index:10;
-        }
-   .uitgeklaptbutton{
-            overflow:hidden;
-            position:absolute;
-            left:45vw;
-            top:11vh;
-            background-size:cover;
-            width:5vw;
-            height:5vh;
-            z-index:10;
-        }
-   /* Div aan de linkerkant van de pagina met daarin een navigatie menu */           
- .navigatieingeklapt{
+div.wrapper2 {
     position:absolute;
     top: 10vh ;
-    width: .1vw;
-    left:0;  
-    }
-   .navigatieuitgeklapt {
-    position:absolute;
-    top: 10vh ;
-    width: 45vw;
+    width: 30vw;
     left:0;
  
-    }	
+}
 
- /* Een menu met buttons voor navigatie door de pagina */
-.menuIn{
-    height: 90vh;
-    width:.1vw;
-    background-color:lightblue;
+	nav.vertical {
+  border-radius: 2vmin;
+  box-shadow: 0 0 1vh rgba(0,0,0,.15);
+  overflow: hidden;
+  text-align: center;
+      height: 90vh;
+      width:30vw;	
+	
 }
-.menuUit{
-    display: block;
-    border-radius: 2vmin;
-    box-shadow: 0 0 1vh rgba(0,0,0,.15);
-    overflow: hidden;
-    text-align: center;
-    height: 90vh;
-    width:45vw;
-    background-color:lightblue;
-} 
-/* Een button in het navigatie menu 2 states ingeklapt of uitgeklapt */
-.menuitemIn{
-    height:10vh;
-    width:0vw;
-    overflow:hidden;
-    visibility:hidden;
- }
-.menuitemUit{
-    visibility:visible;
-    border-bottom: 1vh solid rgba(0,0,0,.05);
-    display:inline-block;
-    font-size:3.2vmin;
-    padding-top: 3vh;
-    height:10vh;
-    width:45vw;
-    text-decoration: none;
-    color: rgb(255,255,255);
-    border-radius: 2vmin;
-    margin-top:.5vh;
-    text-shadow: 0 1vh 1vh rgba(0,0,0,.1);
-    text-transform: uppercase;
-    text-decoration:none;
-    background-color: rgb(157, 34, 60);
-    background-image: -webkit-linear-gradient(135deg, rgb(0, 123, 228  ) , rgb( 92, 179, 255  ));
-    background-image: -moz-linear-gradient(135deg, rgb(0, 123, 228  ), rgb( 92, 179, 255  ));
-    background-image: -o-linear-gradient(135deg, rgb(0, 123, 228   ), rgb( 92, 179, 255  ));
-    background-image: linear-gradient(135deg, rgb(0, 123, 228  ), rgb( 92, 179, 255  ));
- }
+
+  nav.vertical > ul {
+    list-style-type: none;
+  }
+
+    nav.vertical > ul > li {
+      display: block;
+
+       
+    }
+
+      nav.vertical > ul > li > a {
+        background-color: rgb(157, 34, 60);
+        background-image: -webkit-linear-gradient(135deg, rgb(0, 123, 228  ) , rgb( 92, 179, 255  ));
+        background-image: -moz-linear-gradient(135deg, rgb(0, 123, 228  ), rgb( 92, 179, 255  ));
+        background-image: -o-linear-gradient(135deg, rgb(0, 123, 228   ), rgb( 92, 179, 255  ));
+        background-image: linear-gradient(135deg, rgb(0, 123, 228  ), rgb( 92, 179, 255  ));
+        border-bottom: 1vh solid rgba(255,255,255,.1);
+        box-shadow: inset 0 1vh 1vh rgba(0,0,0,.1), 0 1vh 1vh rgba(0,0,0,.1);
+        color: rgb(255,255,255);
+        display: block;
+        font-size: 3.5vmin;
+        font-weight: 500;
+        height: 13vh;
+        
+
+        line-height: 5vh;
+        text-shadow: 0 1vh 1vh rgba(0,0,0,.1);
+        text-transform: uppercase;
+        transition: all .1s ease;
+        text-decoration: none;
+				
+      }
+
+        nav.vertical > ul > li > a:hover {
+         background-color: rgb(114, 51, 98);
+         background-image: -webkit-linear-gradient(150deg, rgb( 139, 198, 235 ), rgb( 139, 198, 235 ));
+         background-image: -moz-linear-gradient(150deg, rgb( 139, 198, 235 ), rgb( 139, 198, 235 ));
+         background-image: -o-linear-gradient(150deg, rgb( 139, 198, 235 ), rgb( 139, 198, 235 ));
+         background-image: linear-gradient(150deg, rgb( 139, 198, 235 ), rgb( 139, 198, 235 )); 
+         cursor: pointer;
+        }
+        
+          nav.vertical > ul > li > div {
+            background-color: rgb(255,255,255);
+					
+          }
  
- /* Een hover effect voor de button in het navigatie menu */
-.menuItem:hover{
-    background-color: lightBlue;
-    color: rgb(255,255,255);
-}
+          nav.vertical > ul > li > div > ul {
+            list-style-type: none;
+          }
+
+            nav.vertical > ul > li > div > ul > li > a {
+             background-color: rgb(255,255,255);
+             border-bottom: 1vh solid rgba(0,0,0,.05);
+             color: black;
+             display: block;
+             font-size: 3vmin;
+             
+             text-decoration: none;
+             transition: all 0.15s linear;
+            }
+
+              nav.vertical > ul > li > div > ul > li:hover > a {
+                background-color: lightBlue;
+                color: rgb(255,255,255);
+              
+              }
+							
+							
+              nav.menu{
+                display: block;
+                border-radius: 2vmin;
+  box-shadow: 0 0 1vh rgba(0,0,0,.15);
+  overflow: hidden;
+  text-align: center;
+      height: 90vh;
+      width:30vw;
+      background-color:lightblue;
+      
+              }                            
+              .menuItem{
+                  border-bottom: 1vh solid rgba(0,0,0,.05);
+                  display:inline-block;
+                  font-size:3.2vmin;
+                  padding-top: 3vh;
+                  height:10vh;
+                  width:30vw;
+                  text-decoration: none;
+                  color: rgb(255,255,255);
+                  border-radius: 2vmin;
+        margin-top:.5vh;
+        text-shadow: 0 1vh 1vh rgba(0,0,0,.1);
+        text-transform: uppercase;
+        text-decoration:none;
+        
+                    background-color: rgb(157, 34, 60);
+                    background-image: -webkit-linear-gradient(135deg, rgb(0, 123, 228  ) , rgb( 92, 179, 255  ));
+                    background-image: -moz-linear-gradient(135deg, rgb(0, 123, 228  ), rgb( 92, 179, 255  ));
+                    background-image: -o-linear-gradient(135deg, rgb(0, 123, 228   ), rgb( 92, 179, 255  ));
+                    background-image: linear-gradient(135deg, rgb(0, 123, 228  ), rgb( 92, 179, 255  ));
+                    
+              }
+              .menuItem:hover{
+                background-color: lightBlue;
+                color: rgb(255,255,255);
+              }
 
 
 #clouds{
@@ -343,7 +452,21 @@ cloud:before, .cloud:after {
 	100% {margin-left: -2000px;}
 }
 
+.shadow2
+{
+    height:26vh;
+    width:26vw;
+}
 
+	
+
+.shadow:active{
+    -webkit-box-shadow: 0vh 1vh 0vh #87adc7;
+    -moz-box-shadow: 0vh 2vh 0vh #87adc7;
+    box-shadow: 0vh 2vh 0vh #87adc7;
+    position:relative;
+    top:1vh;
+}
 
 .stillemuisdiv
 {
@@ -397,30 +520,32 @@ textarea {
     width:50vw;
     height:60vh;
 }
-.fluidHeightIn{
-    	position: absolute;
-	width: 90vw;
-	height: 65vh;
-	padding: 4% 0 4% 0;
-	top: 15vh;
-	right: 2vw;
-	background: #87AFC7 url('images/container-bg.jpg') repeat 50% 0;
-	box-shadow: inset 0 3px 10px -4px #000, inset 0 -3px 10px -4px #000;
+@-webkit-keyframes moveclouds {
+	0vw {margin-left: 200vw;}
+	100vw {margin-left: -200vw;}
 }
-.fluidHeightUit {
+@-moz-keyframes moveclouds {
+	0vw {margin-left: 200vw;}
+	100vw {margin-left: -200vw;}
+}
+@-o-keyframes moveclouds {
+	0vw {margin-left: 200vw;}
+	100vw {margin-left: -200vw;}
+}
+.fluidHeight {
 	position: absolute;
-	width: 47vw;
-	height: 65vh;
+	width: 68%;
+	height: 73vh;
 	padding: 4% 0 4% 0;
-	top: 15vh;
-	right: 2vw;
+	margin-top: 11vh;
+	margin-left: 31%;
 	background: #87AFC7 url('images/container-bg.jpg') repeat 50% 0;
 	box-shadow: inset 0 3px 10px -4px #000, inset 0 -3px 10px -4px #000;
 }
 
 .sliderContainer {
 	height: 100%;
-	max-height: 400px;
+	max-height: 100%;
 	padding: 0 0;
 }
 
@@ -430,7 +555,7 @@ textarea {
 	left: 0;
 	overflow: hidden;
 	width: 100%;
-	height: 400px;
+	height: 100%;
 }
 
 .iosSlider .slider { width: 100%; height: 100%; }
@@ -524,21 +649,4 @@ textarea {
 	.iosSlider .slider .item .inner .text2 { top: 85px; }
 	
 	.iosSlider .slider .item .inner .text2 span { font: 12px/18px "Helvetica Neue",Helvetica,Arial,sans-serif; }
-}
-
-.testIn{
-    position:absolute;
-    width:90vw;
-    height:90vh;
-    top:10vh;
-    left:10vw;
-    background-color:black;
-}
-.testUit{
-    position:absolute;
-    width:60vw;
-    height:90vh;
-    top:10vh;
-    left:40vw;
-    background-color:black;  
 }
