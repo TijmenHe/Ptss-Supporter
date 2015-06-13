@@ -1,6 +1,14 @@
+
+ 
  $(document).ready(function(){
-     $(this).click(function(){
- $('.wrapper2').toggle();
- console.log();
+     $('.ingeklaptbutton').click(function(){
+  
+    $('.ingeklaptbutton').toggleClass('uitgeklaptbutton');
+    $('.navigatieingeklapt').toggleClass('navigatieuitgeklapt');
+    $('.menuIn').toggleClass('menuUit');
+    $('.menuitemIn').toggleClass('menuitemUit');
+    $('.testIn').toggleClass('testUit');
+    $('.fluidHeightIn').toggleClass('fluidHeightUit');
 });
  });
+//$('.wrapper2').toggle(100);$('.wrapper2').hide();

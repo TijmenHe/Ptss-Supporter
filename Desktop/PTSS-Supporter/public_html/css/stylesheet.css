@@ -216,33 +216,72 @@ textarea {
 }
 
 
+  /* button waarmee de linkernavigatiebalk mee kan worden in en uitgeschoven */
+ .ingeklaptbutton{
+            position:absolute;
+            overflow:hidden;
+            left:0vw;
+            top:11vh;
+            width:7vw;
+            height:7vh;
+            z-index:10;
+        }
+   .uitgeklaptbutton{
+            overflow:hidden;
+            position:absolute;
+            left:45vw;
+            top:11vh;
+            background-size:cover;
+            width:5vw;
+            height:5vh;
+            z-index:10;
+        }
    /* Div aan de linkerkant van de pagina met daarin een navigatie menu */           
-div.wrapper2 {
+ .navigatieingeklapt{
     position:absolute;
     top: 10vh ;
-    width: 30vw;
+    width: .1vw;
+    left:0;  
+    }
+   .navigatieuitgeklapt {
+    position:absolute;
+    top: 10vh ;
+    width: 45vw;
     left:0;
  
-}							
-/* Een menu met buttons voor navigatie door de pagina */							
-nav.menu{
+    }	
+
+ /* Een menu met buttons voor navigatie door de pagina */
+.menuIn{
+    height: 90vh;
+    width:.1vw;
+    background-color:lightblue;
+}
+.menuUit{
     display: block;
     border-radius: 2vmin;
     box-shadow: 0 0 1vh rgba(0,0,0,.15);
     overflow: hidden;
     text-align: center;
     height: 90vh;
-    width:30vw;
+    width:45vw;
     background-color:lightblue;
 } 
-/* Een button in het navigatie menu */
-.menuItem{
+/* Een button in het navigatie menu 2 states ingeklapt of uitgeklapt */
+.menuitemIn{
+    height:10vh;
+    width:0vw;
+    overflow:hidden;
+    visibility:hidden;
+ }
+.menuitemUit{
+    visibility:visible;
     border-bottom: 1vh solid rgba(0,0,0,.05);
     display:inline-block;
     font-size:3.2vmin;
     padding-top: 3vh;
     height:10vh;
-    width:30vw;
+    width:45vw;
     text-decoration: none;
     color: rgb(255,255,255);
     border-radius: 2vmin;
@@ -256,6 +295,7 @@ nav.menu{
     background-image: -o-linear-gradient(135deg, rgb(0, 123, 228   ), rgb( 92, 179, 255  ));
     background-image: linear-gradient(135deg, rgb(0, 123, 228  ), rgb( 92, 179, 255  ));
  }
+ 
  /* Een hover effect voor de button in het navigatie menu */
 .menuItem:hover{
     background-color: lightBlue;
@@ -445,25 +485,23 @@ textarea {
     width:50vw;
     height:60vh;
 }
-@-webkit-keyframes moveclouds {
-	0px {margin-left: 200vw;}
-	100vw {margin-left: -200vw;}
-}
-@-moz-keyframes moveclouds {
-	0vw {margin-left: 200vw;}
-	100vw {margin-left: -200vw;}
-}
-@-o-keyframes moveclouds {
-	0vw {margin-left: 200vw;}
-	100vw {margin-left: -200vw;}
-}
-.fluidHeight {
-	position: absolute;
-	width: 60%;
-	height: 400px;
+.fluidHeightIn{
+    	position: absolute;
+	width: 90vw;
+	height: 65vh;
 	padding: 4% 0 4% 0;
-	margin-top: 15%;
-	margin-left: 31%;
+	top: 15vh;
+	right: 2vw;
+	background: #87AFC7 url('images/container-bg.jpg') repeat 50% 0;
+	box-shadow: inset 0 3px 10px -4px #000, inset 0 -3px 10px -4px #000;
+}
+.fluidHeightUit {
+	position: absolute;
+	width: 47vw;
+	height: 65vh;
+	padding: 4% 0 4% 0;
+	top: 15vh;
+	right: 2vw;
 	background: #87AFC7 url('images/container-bg.jpg') repeat 50% 0;
 	box-shadow: inset 0 3px 10px -4px #000, inset 0 -3px 10px -4px #000;
 }
@@ -574,4 +612,21 @@ textarea {
 	.iosSlider .slider .item .inner .text2 { top: 85px; }
 	
 	.iosSlider .slider .item .inner .text2 span { font: 12px/18px "Helvetica Neue",Helvetica,Arial,sans-serif; }
+}
+
+.testIn{
+    position:absolute;
+    width:90vw;
+    height:90vh;
+    top:10vh;
+    left:10vw;
+    background-color:black;
+}
+.testUit{
+    position:absolute;
+    width:60vw;
+    height:90vh;
+    top:10vh;
+    left:40vw;
+    background-color:black;  
 }
