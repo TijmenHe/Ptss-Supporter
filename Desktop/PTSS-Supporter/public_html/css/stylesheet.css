@@ -4,6 +4,8 @@ body {
    width:100%;
    height:100%;
    overflow: hidden;
+	 background-color:lightblue;
+	
 }
 #headerdiv{
     position:absolute;
@@ -39,7 +41,7 @@ body {
     position:absolute;
     background-color:lightblue;
     width:100vw;
-    height:40vh;
+    height:20%;
     top:10vh;
     z-index:3;
 }
@@ -212,130 +214,125 @@ textarea {
 		 border: #56A5EC 1vh solid;
 }
 
-div.wrapper2 {
+
+  /* button waarmee de linkernavigatiebalk mee kan worden in en uitgeschoven */
+ .ingeklaptbutton{
+            position:absolute;
+            overflow:hidden;
+            left:0vw;
+            top:11vh;
+            width:7vw;
+            height:7vh;
+            z-index:10;
+        }
+   .uitgeklaptbutton{
+            overflow:hidden;
+            position:absolute;
+            left:45vw;
+            top:11vh;
+            background-size:cover;
+            width:5vw;
+            height:5vh;
+            z-index:10;
+        }
+   /* Div aan de linkerkant van de pagina met daarin een navigatie menu */           
+ .navigatieingeklapt{
     position:absolute;
     top: 10vh ;
-    width: 30vw;
+    width: .1vw;
+    left:0;  
+    }
+   .navigatieuitgeklapt {
+    position:absolute;
+    top: 10vh ;
+    width: 45vw;
     left:0;
  
+    }	
+
+ /* Een menu met buttons voor navigatie door de pagina */
+.menuIn{
+    height: 90vh;
+    width:.1vw;
+    background-color:lightblue;
 }
-
-	nav.vertical {
-  border-radius: 2vmin;
-  box-shadow: 0 0 1vh rgba(0,0,0,.15);
-  overflow: hidden;
-  text-align: center;
-      height: 90vh;
-      width:30vw;	
-	
-}
-
-  nav.vertical > ul {
-    list-style-type: none;
-  }
-
-    nav.vertical > ul > li {
-      display: block;
-
-       
-    }
-
-      nav.vertical > ul > li > a {
-        background-color: rgb(157, 34, 60);
-        background-image: -webkit-linear-gradient(135deg, rgb(0, 123, 228  ) , rgb( 92, 179, 255  ));
-        background-image: -moz-linear-gradient(135deg, rgb(0, 123, 228  ), rgb( 92, 179, 255  ));
-        background-image: -o-linear-gradient(135deg, rgb(0, 123, 228   ), rgb( 92, 179, 255  ));
-        background-image: linear-gradient(135deg, rgb(0, 123, 228  ), rgb( 92, 179, 255  ));
-        border-bottom: 1vh solid rgba(255,255,255,.1);
-        box-shadow: inset 0 1vh 1vh rgba(0,0,0,.1), 0 1vh 1vh rgba(0,0,0,.1);
-        color: rgb(255,255,255);
-        display: block;
-        font-size: 3.5vmin;
-        font-weight: 500;
-        height: 13vh;
-        
-
-        line-height: 5vh;
-        text-shadow: 0 1vh 1vh rgba(0,0,0,.1);
-        text-transform: uppercase;
-        transition: all .1s ease;
-        text-decoration: none;
-				
-      }
-
-        nav.vertical > ul > li > a:hover {
-         background-color: rgb(114, 51, 98);
-         background-image: -webkit-linear-gradient(150deg, rgb( 139, 198, 235 ), rgb( 139, 198, 235 ));
-         background-image: -moz-linear-gradient(150deg, rgb( 139, 198, 235 ), rgb( 139, 198, 235 ));
-         background-image: -o-linear-gradient(150deg, rgb( 139, 198, 235 ), rgb( 139, 198, 235 ));
-         background-image: linear-gradient(150deg, rgb( 139, 198, 235 ), rgb( 139, 198, 235 )); 
-         cursor: pointer;
+.menuUit{
+    display: block;
+    border-radius: 2vmin;
+    box-shadow: 0 0 1vh rgba(0,0,0,.15);
+    overflow: hidden;
+    text-align: center;
+    height: 90vh;
+    width:45vw;
+    background-color:lightblue;
+} 
+/* Een button in het navigatie menu 2 states ingeklapt of uitgeklapt */
+.menuitemIn{
+    height:10vh;
+    width:0vw;
+    overflow:hidden;
+    visibility:hidden;
+ }
+  #navLinks ul li {
+            float: left;
+            text-align: center;
+            margin: 1vh;
+            list-style: none;
+            cursor: pointer;
+            background-color: lightBlue;
+            padding: 1vh;
+            border-radius: 50vh;
+            border: #56A5EC 1vh solid;
         }
-        
-          nav.vertical > ul > li > div {
-            background-color: rgb(255,255,255);
-					
-          }
- 
-          nav.vertical > ul > li > div > ul {
-            list-style-type: none;
-          }
-
-            nav.vertical > ul > li > div > ul > li > a {
-             background-color: rgb(255,255,255);
-             border-bottom: 1vh solid rgba(0,0,0,.05);
-             color: black;
-             display: block;
-             font-size: 3vmin;
-             
-             text-decoration: none;
-             transition: all 0.15s linear;
+            #navLinks ul li:hover {
+                background-color: #99D0FF;
             }
-
-              nav.vertical > ul > li > div > ul > li:hover > a {
-                background-color: lightBlue;
-                color: rgb(255,255,255);
-              
-              }
-							
-							
-              nav.menu{
-                display: block;
-                border-radius: 2vmin;
-  box-shadow: 0 0 1vh rgba(0,0,0,.15);
-  overflow: hidden;
-  text-align: center;
-      height: 90vh;
-      width:30vw;
-      background-color:lightblue;
-      
-              }                            
-              .menuItem{
-                  border-bottom: 1vh solid rgba(0,0,0,.05);
-                  display:inline-block;
-                  font-size:3.2vmin;
-                  padding-top: 3vh;
-                  height:10vh;
-                  width:30vw;
-                  text-decoration: none;
-                  color: rgb(255,255,255);
-                  border-radius: 2vmin;
-        margin-top:.5vh;
-        text-shadow: 0 1vh 1vh rgba(0,0,0,.1);
-        text-transform: uppercase;
-        text-decoration:none;
-        
-                    background-color: rgb(157, 34, 60);
-                    background-image: -webkit-linear-gradient(135deg, rgb(0, 123, 228  ) , rgb( 92, 179, 255  ));
-                    background-image: -moz-linear-gradient(135deg, rgb(0, 123, 228  ), rgb( 92, 179, 255  ));
-                    background-image: -o-linear-gradient(135deg, rgb(0, 123, 228   ), rgb( 92, 179, 255  ));
-                    background-image: linear-gradient(135deg, rgb(0, 123, 228  ), rgb( 92, 179, 255  ));
-                    
-              }
-              .menuItem:hover{
-                background-color: lightBlue;
-                color: rgb(255,255,255);
-              }
+            #navLinks ul li.active {
+                background-color: #99D0FF;
+                color: #FFFFFF;
+                outline-width: 1vh;
+            }
+                #navLinks ul li.active:hover {
+                    background-color: #99D0FF;
+                    color: #99D0FF;
+                }
+								
+								#navLinks ul li.active {
+    background-color: #5CB3FF;
+    color: #FFFFFF;
+    outline-width: 1vh;
+}
+#navLinks ul li.active:hover {
+    background-color: #484848;
+    color: #FFFFFF;
+}
+.menuitemUit{
+    visibility:visible;
+    border-bottom: 1vh solid rgba(0,0,0,.05);
+    display:inline-block;
+    font-size:3.2vmin;
+    padding-top: 3vh;
+    height:10vh;
+    width:45vw;
+    text-decoration: none;
+    color: rgb(255,255,255);
+    border-radius: 2vmin;
+    margin-top:.5vh;
+    text-shadow: 0 1vh 1vh rgba(0,0,0,.1);
+    text-transform: uppercase;
+    text-decoration:none;
+    background-color: rgb(157, 34, 60);
+    background-image: -webkit-linear-gradient(135deg, rgb(0, 123, 228  ) , rgb( 92, 179, 255  ));
+    background-image: -moz-linear-gradient(135deg, rgb(0, 123, 228  ), rgb( 92, 179, 255  ));
+    background-image: -o-linear-gradient(135deg, rgb(0, 123, 228   ), rgb( 92, 179, 255  ));
+    background-image: linear-gradient(135deg, rgb(0, 123, 228  ), rgb( 92, 179, 255  ));
+ }
+ 
+ /* Een hover effect voor de button in het navigatie menu */
+.menuItem:hover{
+    background-color: lightBlue;
+    color: rgb(255,255,255);
+}
 
 
 #clouds{
@@ -532,6 +529,29 @@ textarea {
 	0vw {margin-left: 200vw;}
 	100vw {margin-left: -200vw;}
 }
+.fluidHeightIn{
+    	position: absolute;
+	width: 90vw;
+	height: 65vh;
+	padding: 4% 0 4% 0;
+	top: 15vh;
+	right: 2vw;
+	background: #87AFC7 url('images/container-bg.jpg') repeat 50% 0;
+	box-shadow: inset 0 3px 10px -4px #000, inset 0 -3px 10px -4px #000;
+	text-align: center;
+}
+.fluidHeightUit {
+	position: absolute;
+	width: 47vw;
+	height: 65vh;
+	padding: 4% 0 4% 0;
+	top: 15vh;
+	right: 2vw;
+	background: #87AFC7 url('images/container-bg.jpg') repeat 50% 0;
+	box-shadow: inset 0 3px 10px -4px #000, inset 0 -3px 10px -4px #000;
+	text-align: center;
+
+}
 .fluidHeight {
 	position: absolute;
 	width: 68%;
@@ -541,12 +561,14 @@ textarea {
 	margin-left: 31%;
 	background: #87AFC7 url('images/container-bg.jpg') repeat 50% 0;
 	box-shadow: inset 0 3px 10px -4px #000, inset 0 -3px 10px -4px #000;
+	text-align: center;
 }
 
 .sliderContainer {
 	height: 100%;
 	max-height: 100%;
 	padding: 0 0;
+	text-align: center;
 }
 
 .iosSlider {
@@ -556,11 +578,12 @@ textarea {
 	overflow: hidden;
 	width: 100%;
 	height: 100%;
+		text-align: center;
 }
 
-.iosSlider .slider { width: 100%; height: 100%; }
+.iosSlider .slider { width: 100%; height: 100%; 	text-align: center;}
 
-.iosSlider .slider .item { width: 100%; height: 100%; padding: 5px 0 5px 0; }
+.iosSlider .slider .item { width: 100%; height: 100%; padding: 5px 0 5px 0; text-align: center;}
 
 .iosSlider .slider .item .inner {
 	position: relative;
@@ -636,14 +659,14 @@ textarea {
 }
 
 
-@media screen and (max-width: 1105px) {
+@media screen and (max-width: 110.5vw) {
 	.iosSlider .slider .item .inner { width: 92%;	margin: 0 4%; background-position: 80% 0; }
 	
 	.sliderContainer .slideSelectors {	width: 92%;	margin: 0 4%; }
 	
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 76.8vw) {
 	.iosSlider .slider .item .inner .text1 span { font: 40px/50px Arial; }
 	
 	.iosSlider .slider .item .inner .text2 { top: 85px; }
