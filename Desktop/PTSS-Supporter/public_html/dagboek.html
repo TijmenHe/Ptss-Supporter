@@ -1,18 +1,16 @@
 <!DOCTYPE html>
+
 <html>
-
-
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="./css/stylesheet.css">
-    <script type="text/javascript" src="js/index.js"></script>
-    <title>gedachten</title>
-</head>
-
-<body>
-
+    <head>
+        <title>dagboek</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+        <script type="text/javascript" src="js/index.js"></script>
+    </head>
+    <body>
     <div class="homediv">
-          <div id="headerdiv">
+      <div id="headerdiv">
               
                         <a href="#null" onclick="javascript:history.back();">
                             <img src="images/vorige.png" class="home" alt="terug">
@@ -27,33 +25,26 @@
                         </a>
                   
             </div>
-        <div class="wrapper2">
+         <div class="wrapper2">
             <nav class="menu">
                <a href="overtuigingen.html" class="menuItem">vragenlijst voorkomende overtuigingen</a> 
                <a href="dagboek.html" class="menuItem">dagboek</a> 
             </nav>
         </div>
-        
-    <div class="fluidHeight">
+        <div class="fluidHeight">
   <div class="sliderContainer">
     <div class="iosSlider">
       <div class="slider">
-          <div class="item item1">                    
-                    <span>
-                        <h1>Welkom bij het onderdeel gedachten</h1>
-                        <p>Hier links kun je selecteren welk onderdeel je wilt bekijken<br><br>
-                           Bij veel voorkomende overtuigingen kun je aangeven of bepaalde stellingen op jou van toepassing zijn.</p>
-                    </span>
+          <div class="item item1">
+
+                    <form name="dagboek">
+                    <h1>Uitleg1</h1>
+                    <textarea name="iets" form="dagboek" placeholder="schrijf hier in je dagboek"></textarea><br>
+                    <input type="submit" value="opslaan">
+                    </form>
                 </div>
             </div>
         </div>
-        
-        <div id="navLinks">
-        </div>
-    </div>
- 
-    
-
-</body>
-
+      </div>
+    </body>
 </html>
