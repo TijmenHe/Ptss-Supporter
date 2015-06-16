@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-<meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="./css/stylesheet.css">
-
-<title>Home</title>
-<script type="text/javascript" src=
+    <script src="js/jquery.min.js"></script>
+     <script type="text/javascript" src="js/jquerys.js"></script>
+      <script type="text/javascript" src="js/index.js"></script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./css/stylesheet.css">
+		<script type="text/javascript" src=
 "https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
 </script>
  <script type="text/javascript" charset="utf-8" src="jquery.easing-1.3.js"></script>
   <script type="text/javascript" charset="utf-8" src="jquery.iosslider.min.js"></script>
-</head>
+ <style>
 
-<body>
+    </style>
+   
+
+    <title>psycho</title>
+    
+</head>
+    <body>
         <div class="homediv">
-      <div id="headerdiv">
+         <div id="headerdiv">
               
                         <a href="#null" onclick="javascript:history.back();">
                             <img src="images/vorige.png" class="home" alt="terug">
@@ -30,41 +36,18 @@
                         </a>
                   
             </div>
-			<div class="wrapper2">
-  <nav class="vertical">
-    <ul>
-      <li>
-        <a href="pscyho-trauma.html">Wat is een trauma?</a>
-          </li>
-					<li>
-        <a href="pscyho-ptss">wat is PTSS?</a>
-          </li>
-					<li>
-        <a href="pscyho-behandeling.html">Behandeling van PTSS</a>
-				
-          </li>
-           <li>
-                            <a href="pscyho-vvb.html">Vechten, Vluchten, Bevriezen </a>
-<div>
-                             <ul>
-                                    <li><a href="pscyho-vvb_1.html">Deel 1</a></li>
-                                    <li><a href="pscyho-vvb_2.html">Deel 2</a></li>
-                                    <li><a href="pscyho-vvb_3.html">Deel 3</a></li>
-                                </ul>
-                            </div>
-                        </li>
-    <li>
-        <a href="pscyho-alexander.html">Het verhaal van Alexander</a>
-       
-      </li>
-      <li>
-        <a href="pscyho-bruiloft.html">De bruiloft</a>
-       
-      </li>
-    </ul>
-  </nav>
-  </div>
-    <div class="fluidHeight">
+						 <input class="ingeklaptbutton" type="image" src="images/inklap.jpg" alt="inklappen">
+             <div class="navigatieingeklapt">
+                <nav class="menuIn">
+                    <a href="pscyho-trauma.html" class="menuitemIn">Wat is een trauma?</a>
+                    <a href="pscyho-ptss.html" class="menuitemIn">wat is PTSS?</a>
+                    <a href="pscyho-behandeling.html" class="menuitemIn">Behandeling van PTSS</a>
+                    <a href="pscyho-vvb.html" class="menuitemIn">Vechten, Vluchten, Bevriezen </a>
+                    <a href="pscyho-alexander.html" class="menuitemIn" >Het verhaal van Alexander</a>
+                    <a href="pscyho-bruiloft.html" class="menuitemIn">De bruiloft</a>
+                </nav>
+            </div>
+       <div class="fluidHeightIn">
   <div class="sliderContainer">
     <div class="iosSlider">
       <div class="slider">
@@ -284,68 +267,7 @@ De onderlijn van het raampje is dan veel hoger, omdat er nog stress of gevoel va
     </div>
 
 </div>
-    
-<script type="text/javascript">
-$(document).ready(function() {
-  
-  $('.iosSlider').iosSlider({
-    desktopClickDrag: true,
-    snapToChildren: true,
-    navSlideSelector: '.sliderContainer .slideSelectors .item',
-    onSlideComplete: slideComplete,
-    onSliderLoaded: sliderLoaded,
-    onSlideChange: slideChange,
-    scrollbar: false,
-    autoSlide: false,
-    autoSlideTimer: 3300,
-    infiniteSlider: false
-  });
-  
-});
 
-function slideChange(args) {
-      
-  $('.sliderContainer .slideSelectors .item').removeClass('selected');
-  $('.sliderContainer .slideSelectors .item:eq(' + (args.currentSlideNumber - 1) + ')').addClass('selected');
-
-}
-
-function slideComplete(args) {
-  
-  if(!args.slideChanged) return false;
-  
-  $(args.sliderObject).find('.text1, .text2').attr('style', '');
-  
-  $(args.currentSlideObject).find('.text1').animate({
-    right: '100px',
-    opacity: '0.8'
-  }, 400, 'easeOutQuint');
-  
-  $(args.currentSlideObject).find('.text2').delay(200).animate({
-    right: '70px',
-    opacity: '0.8'
-  }, 400, 'easeOutQuint');
-  
-}
-
-function sliderLoaded(args) {
-    
-  $(args.sliderObject).find('.text1, .text2').attr('style', '');
-  
-  $(args.currentSlideObject).find('.text1').animate({
-    right: '100px',
-    opacity: '0.8'
-  }, 400, 'easeOutQuint');
-  
-  $(args.currentSlideObject).find('.text2').delay(200).animate({
-    right: '70px',
-    opacity: '0.8'
-  }, 400, 'easeOutQuint');
-  
-  slideChange(args);
-  
-}
-</script>
 </body>
 
 </html>
