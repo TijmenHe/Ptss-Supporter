@@ -45,9 +45,13 @@
                 <nav class="menuIn">
                     <a href="ontspanningsoefening.html" class="menuitemIn">Ontspanningsoefening</a>
                     <a href="ademhalen.html" class="menuitemIn">Ademhalen</a>
+										 <a href="rekkenenstrekken.html" class="menuitemIn">Rekken en Strekken</a>
+                    <a href="rustigworden.html" class="menuitemIn">Rustig worden</a>
+										 <a href="focusenevenwicht.html" class="menuitemIn">Focus en evenwicht</a>
                 </nav>
             </div>
-       <div class="fluidHeightIn">
+ 
+                          <div class="fluidHeightIn">
   <div class="sliderContainer">
     <div class="iosSlider">
       <div class="slider">
@@ -93,66 +97,6 @@
 
 </div>
     
-<script type="text/javascript">
-$(document).ready(function() {
-  
-  $('.iosSlider').iosSlider({
-    desktopClickDrag: true,
-    snapToChildren: true,
-    navSlideSelector: '.sliderContainer .slideSelectors .item',
-    onSlideComplete: slideComplete,
-    onSliderLoaded: sliderLoaded,
-    onSlideChange: slideChange,
-    scrollbar: false,
-    autoSlide: false,
-    autoSlideTimer: 3300,
-    infiniteSlider: false
-  });
-  
-});
 
-function slideChange(args) {
-      
-  $('.sliderContainer .slideSelectors .item').removeClass('selected');
-  $('.sliderContainer .slideSelectors .item:eq(' + (args.currentSlideNumber - 1) + ')').addClass('selected');
-
-}
-
-function slideComplete(args) {
-  
-  if(!args.slideChanged) return false;
-  
-  $(args.sliderObject).find('.text1, .text2').attr('style', '');
-  
-  $(args.currentSlideObject).find('.text1').animate({
-    right: '100px',
-    opacity: '0.8'
-  }, 400, 'easeOutQuint');
-  
-  $(args.currentSlideObject).find('.text2').delay(200).animate({
-    right: '70px',
-    opacity: '0.8'
-  }, 400, 'easeOutQuint');
-  
-}
-
-function sliderLoaded(args) {
-    
-  $(args.sliderObject).find('.text1, .text2').attr('style', '');
-  
-  $(args.currentSlideObject).find('.text1').animate({
-    right: '100px',
-    opacity: '0.8'
-  }, 400, 'easeOutQuint');
-  
-  $(args.currentSlideObject).find('.text2').delay(200).animate({
-    right: '70px',
-    opacity: '0.8'
-  }, 400, 'easeOutQuint');
-  
-  slideChange(args);
-  
-}
-</script>
     </body>
 </html>

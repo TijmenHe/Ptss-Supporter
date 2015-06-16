@@ -1,17 +1,29 @@
-﻿<html>
+<!DOCTYPE html>
+<html>
 
+<head>
+    <script src="js/jquery.min.js"></script>
+     <script type="text/javascript" src="js/jquerys.js"></script>
+      <script type="text/javascript" src="js/index.js"></script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./css/stylesheet.css">
+		<script type="text/javascript" src=
+"https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+</script>
+ <script type="text/javascript" charset="utf-8" src="jquery.easing-1.3.js"></script>
+  <script type="text/javascript" charset="utf-8" src="jquery.iosslider.min.js"></script>
+ <style>
 
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="./css/stylesheet.css">
+    </style>
 
-        <title>Home</title>
+<title>Home</title>
 
-    </head>
+</head>
 
-    <body>
+<body>
+
         <div class="homediv">
-      <div id="headerdiv">
+                  <div id="headerdiv">
               
                         <a href="#null" onclick="javascript:history.back();">
                             <img src="images/vorige.png" class="home" alt="terug">
@@ -26,34 +38,20 @@
                         </a>
                   
             </div>
+          
+<input class="ingeklaptbutton" type="image" src="images/inklap.jpg" alt="inklappen">
+
+<div class="navigatieingeklapt">
+                <nav class="menuIn">
+                    <a href="ontspanningsoefening.html" class="menuitemIn">Ontspanningsoefening</a>
+                    <a href="ademhalen.html" class="menuitemIn">Ademhalen</a>
+										 <a href="rekkenenstrekken.html" class="menuitemIn">Rekken en Strekken</a>
+                    <a href="rustigworden.html" class="menuitemIn">Rustig worden</a>
+										 <a href="focusenevenwicht.html" class="menuitemIn">Focus en evenwicht</a>
+                </nav>
+            </div>
  
-            <div class="wrapper2">
-  <nav class="vertical">
-    <ul>
-      <li>
-        <a href="ontspanningsoefening.html">Ontspanningsoefening</a>
-          </li>
-          <li><a href="yoga.html">Yoga</a>
-          <div>
-                                <ul>
-                                  <li>
-        <a href="focusenevenwicht.html">Focus en evenwicht</a>
-          </li>
-					<li>
-        <a href="rekkenenstrekken.html">Rekken en strekken</a>
-	
-            <li><a href="rustigworden.html">Rustig worden</a></li>
- 
-      <li>
-        <a href="ademhalen.html">Ademhalen</a>
-        
-      </li>
-                                </ul>
-                    
-		     </div>	</li>		
-    </ul>
-    </div>
-              <div class="fluidHeight">
+                          <div class="fluidHeightIn">
   <div class="sliderContainer">
     <div class="iosSlider">
       <div class="slider">
@@ -61,8 +59,8 @@
 
 
                         <span><h3>De boot</h3>
-                            <p align="left"> 
-                                1.	Ga met rechte rug op een matje zitten.</br>&nbsp;&nbsp;  Zet je voeten plat op de grond en </br>&nbsp;&nbsp;  sla je armen om je knieën.</br></br>
+                            <p align="center"> 
+                                1.	Ga met rechte rug op een matje zitten.</br>&nbsp;&nbsp;  Zet je voeten plat op de grond en </br>&nbsp;&nbsp;  sla je armen om je knie�n.</br></br>
                                 2.	Leun naar achteren en zet je handen </br>&nbsp;&nbsp;  achter je op de grond.</br></br>
                                 3.	Spits je tenen en breng je benen omhoog.</br></br>
                                 4.	Strek je armen naar voren en bewaar je</br>&nbsp;&nbsp; evenwicht.
@@ -77,85 +75,19 @@
                         <div class="item item2">
                         <span>
                             <h3>Het vliegtuig</h3>
-                           <p align="left"> 
+														 
+                           <p align="center"> 
                             1.	Ga staan en maak je lang.</br></br>
                             2.	Op een inademing strek je een</br>&nbsp;&nbsp; been naar achteren uit.</br></br>
                             3.	Concentreer je op je ademhaling</br>&nbsp;&nbsp; en hoe je daar rustig van wordt.</br></br>
                             4.	Strek je armen uit naar opzij</br>&nbsp;&nbsp;als de vleugels van een vliegtuig.
-                           <div class="vliegtuigdiv"><img src="images/vliegtuig.jpg"  alt="hetvliegtuig" ></div>
-                            </p>
+                         <div class="bootdiv"><img src="images/vliegtuig.jpg"  alt="hetvliegtuig" >
+                            </p>  </span>
                            
 </div>
-                        </span>
-                    
-  </div>
-            
-					
-        </div>
-    </div>
-
+                      
 </div>
     
-<script type="text/javascript">
-$(document).ready(function() {
-  
-  $('.iosSlider').iosSlider({
-    desktopClickDrag: true,
-    snapToChildren: true,
-    navSlideSelector: '.sliderContainer .slideSelectors .item',
-    onSlideComplete: slideComplete,
-    onSliderLoaded: sliderLoaded,
-    onSlideChange: slideChange,
-    scrollbar: false,
-    autoSlide: false,
-    autoSlideTimer: 3300,
-    infiniteSlider: false
-  });
-  
-});
 
-function slideChange(args) {
-      
-  $('.sliderContainer .slideSelectors .item').removeClass('selected');
-  $('.sliderContainer .slideSelectors .item:eq(' + (args.currentSlideNumber - 1) + ')').addClass('selected');
-
-}
-
-function slideComplete(args) {
-  
-  if(!args.slideChanged) return false;
-  
-  $(args.sliderObject).find('.text1, .text2').attr('style', '');
-  
-  $(args.currentSlideObject).find('.text1').animate({
-    right: '100px',
-    opacity: '0.8'
-  }, 400, 'easeOutQuint');
-  
-  $(args.currentSlideObject).find('.text2').delay(200).animate({
-    right: '70px',
-    opacity: '0.8'
-  }, 400, 'easeOutQuint');
-  
-}
-
-function sliderLoaded(args) {
-    
-  $(args.sliderObject).find('.text1, .text2').attr('style', '');
-  
-  $(args.currentSlideObject).find('.text1').animate({
-    right: '100px',
-    opacity: '0.8'
-  }, 400, 'easeOutQuint');
-  
-  $(args.currentSlideObject).find('.text2').delay(200).animate({
-    right: '70px',
-    opacity: '0.8'
-  }, 400, 'easeOutQuint');
-  
-  slideChange(args);
-  
-}
-</script>
-                </body>
-                </html>
+    </body>
+</html>
