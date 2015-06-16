@@ -8,20 +8,9 @@
     $('.navigatieingeklapt').toggleClass('navigatieuitgeklapt');
     $('.menuIn').toggleClass('menuUit');
     $('.menuitemIn').toggleClass('menuitemUit');
-    $('.fluidHeightIn').toggleClass('fluidHeightUit');
-    $('.iosSlider').iosSlider({
-    desktopClickDrag: true,
-    snapToChildren: true,
-    navSlideSelector: '.sliderContainer .slideSelectors .item',
-    onSlideComplete: slideComplete,
-    onSliderLoaded: sliderLoaded,
-    onSlideChange: slideChange,
-    scrollbar: false,
-    autoSlide: false,
-    autoSlideTimer: 3300,
-    infiniteSlider: false
+
     });
-    });
+  
     
     $('.iosSlider').iosSlider({
     desktopClickDrag: true,
@@ -66,5 +55,5 @@
     }, 400, 'easeOutQuint');
     slideChange(args);
     }
-    
- });
+      });
+

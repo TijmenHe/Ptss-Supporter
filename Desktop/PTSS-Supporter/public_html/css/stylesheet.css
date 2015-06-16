@@ -228,7 +228,7 @@ textarea {
    .uitgeklaptbutton{
             overflow:hidden;
             position:absolute;
-            left:45vw;
+            left:51vw;
             top:11vh;
             background-size:cover;
             width:5vw;
@@ -240,14 +240,15 @@ textarea {
     position:absolute;
     top: 10vh ;
     width: .1vw;
-    left:0;  
+    left:0; 
+    z-index:10;
     }
    .navigatieuitgeklapt {
     position:absolute;
     top: 10vh ;
-    width: 45vw;
+    width: 50vw;
     left:0;
- 
+    z-index:10;
     }	
 
  /* Een menu met buttons voor navigatie door de pagina */
@@ -255,6 +256,7 @@ textarea {
     height: 90vh;
     width:.1vw;
     background-color:lightblue;
+    z-index:10;
 }
 .menuUit{
     display: block;
@@ -263,8 +265,9 @@ textarea {
     overflow: hidden;
     text-align: center;
     height: 90vh;
-    width:45vw;
+    width:50vw;
     background-color:lightblue;
+    z-index:10;
 } 
 /* Een button in het navigatie menu 2 states ingeklapt of uitgeklapt */
 .menuitemIn{
@@ -272,6 +275,7 @@ textarea {
     width:0vw;
     overflow:hidden;
     visibility:hidden;
+    
  }
   #navLinks ul li {
             float: left;
@@ -539,29 +543,7 @@ textarea {
 	background: #87AFC7 url('images/container-bg.jpg') repeat 50% 0;
 	box-shadow: inset 0 3px 10px -4px #000, inset 0 -3px 10px -4px #000;
 	text-align: center;
-}
-.fluidHeightUit {
-	position: absolute;
-	width: 47vw;
-	height: 65vh;
-	padding: 4% 0 4% 0;
-	top: 15vh;
-	right: 2vw;
-	background: #87AFC7 url('images/container-bg.jpg') repeat 50% 0;
-	box-shadow: inset 0 3px 10px -4px #000, inset 0 -3px 10px -4px #000;
-	text-align: center;
-
-}
-.fluidHeight {
-	position: absolute;
-	width: 68%;
-	height: 73vh;
-	padding: 4% 0 4% 0;
-	margin-top: 11vh;
-	margin-left: 31%;
-	background: #87AFC7 url('images/container-bg.jpg') repeat 50% 0;
-	box-shadow: inset 0 3px 10px -4px #000, inset 0 -3px 10px -4px #000;
-	text-align: center;
+        z-index:1;
 }
 
 .sliderContainer {
@@ -569,6 +551,7 @@ textarea {
 	max-height: 100%;
 	padding: 0 0;
 	text-align: center;
+        z-index:1;
 }
 
 .iosSlider {
@@ -579,11 +562,12 @@ textarea {
 	width: 100%;
 	height: 100%;
 		text-align: center;
+                z-index:1;
 }
 
-.iosSlider .slider { width: 100%; height: 100%; 	text-align: center;}
+.iosSlider .slider { width: 100%; height: 100%; 	text-align: center; z-index:1;}
 
-.iosSlider .slider .item { width: 100%; height: 100%; padding: 5px 0 5px 0; text-align: center;}
+.iosSlider .slider .item { width: 100%; height: 100%; padding: 5px 0 5px 0; text-align: center; z-index:1;}
 
 .iosSlider .slider .item .inner {
 	position: relative;
@@ -595,6 +579,7 @@ textarea {
 	box-shadow: 0 0 10px -5px #000;
 	background-position: 50% 0;
 	background-repeat: no-repeat;
+        z-index:1;
 }
 
 .iosSlider .slider .item .inner .text1 {
@@ -605,6 +590,7 @@ textarea {
   right: 150px;
   top: 30px;
   padding: 5px 2px 0 7px;
+  z-index:1;
 }
 
 .iosSlider .slider .item .inner .text1 span { color: #fff; font: 55px/70px Arial; padding: 0 8px; }
@@ -617,9 +603,10 @@ textarea {
   position: absolute;
   right: 0;
   top: 100px;
+  z-index:1;
 }
 
-.iosSlider .slider .item .inner .text2 span { color: #fff; font: 16px/20px "Arial",Helvetica,Arial,sans-serif; }
+.iosSlider .slider .item .inner .text2 span {z-index:1; color: #fff; font: 16px/20px "Arial",Helvetica,Arial,sans-serif; }
 
 .iosSlider .slider .item1 .inner { background-image: url('images/h-slider-1.jpg'); }
 
