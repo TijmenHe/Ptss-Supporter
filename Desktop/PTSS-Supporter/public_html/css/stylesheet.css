@@ -51,8 +51,8 @@ body {
     position:absolute;
     background-color:lightblue;
     width:100vw;
-    height:7vh;
-    bottom:43vh;
+    top:51vh;
+   
     text-align:center;
     font-size: 3vmin;
     z-index: 2;
@@ -121,7 +121,30 @@ body {
        margin-right:11vw;
        width:10vw;
        height:10vh;
+
 }
+
+       .trauma{font-family:Arial;font-size:7vmin;font-style:bold;font-weight:bold;text-decoration:none;text-transform:none;color: lightblue;
+float: left;
+text-shadow: -1px 1px 0px rgba(144, 150, 231, 1);
+text-shadow: -2px -2px 1px #FFF, -1px -1px 1px #FFF, 1px 1px 1px rgba(232, 247, 255, 0.9), 1px 1px 0px #2A658B, 2px 2px 0px #29638A, 3px 3px 0px #286188, 4px 4px 0px #275F85, 5px 5px 0px #265D83, 6px 6px 0px #255A80;
+
+
+ margin-top:0vh;
+       margin-left:11vw;
+       margin-right:11vw;
+       width:11vw;
+       height:11vh;
+}
+.home2{
+       margin-top:0vh;
+       margin-left:0vw;
+       margin-right:0vw;
+       width:33vw;
+       height:10vh;
+
+}
+
 @-ms-viewport{
   width: device-width;
   height:device-height;
@@ -133,7 +156,7 @@ body {
 }
 
 .content {
-    float: left;
+    
     width: 100vh;
     height: 10vh;
 		
@@ -205,8 +228,9 @@ body {
 }
 
 span{
-font-family:Arial;font-size:3.5vmin;font-style:normal;font-weight:normal;text-decoration:none;text-transform:none;color: rgb(255,255,255);text-shadow: 0.2vmin 0.2vmin black;
+font-family:Arial;font-size:3.5vmin;font-style:normal;font-weight:normal;text-decoration:none;text-transform:none;color: rgb(255,255,255);text-shadow: 0.3vmin 0.3vmin black;
 }
+
 
 textarea {
     resize: none;
@@ -315,8 +339,8 @@ textarea {
     border-bottom: 1vh solid rgba(0,0,0,.05);
     display:inline-block;
     font-size:3.2vmin;
-    padding-top: 3vh;
-    height:10vh;
+    padding-top: 2.5vh;
+    height:8vh;
     width:45vw;
     text-decoration: none;
     color: rgb(255,255,255);
@@ -497,15 +521,16 @@ top: 100px;
 .dehonddiv
 {
 position:absolute;
-left: 1050px;
-top: 100px;
+left: 105vw;
+top: 10vh;
 }
 
 .bootdiv
 {
 position:absolute;
-left: 350px;
-top: 125px;
+left: 62.5vw;
+bottom: 25vh;
+width:10vw;
 }
 
 .vliegtuigdiv
@@ -660,3 +685,7 @@ textarea {
 	
 	.iosSlider .slider .item .inner .text2 span { font: 12px/18px "Helvetica Neue",Helvetica,Arial,sans-serif; }
 }
+#player {
+ width: 16vw;
+ height: 10vh;
+}?
