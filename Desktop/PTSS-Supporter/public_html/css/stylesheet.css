@@ -181,61 +181,22 @@ text-shadow: -2px -2px 1px #FFF, -1px -1px 1px #FFF, 1px 1px 1px rgba(232, 247, 
     left: 0vw;
     transition: left .5s ease-in-out;
 }
-#navLinks {
-    text-align: center;
-    width: 5vw;
-		margin-left: 3vw;
-                 
-}
-    #navLinks ul {
-        margin: 0;
-        padding: 0;
-        display: inline-block;
-        margin-top: 90vh;
-    }
-        #navLinks ul li {
-            float: left;
-            text-align: center;
-            margin: 1vh;
-            list-style: none;
-            cursor: pointer;
-            background-color: lightBlue;
-            padding: 1vh;
-            border-radius: 50vh;
-            border: #56A5EC 1vh solid;
-        }
-            #navLinks ul li:hover {
-                background-color: #99D0FF;
-            }
-            #navLinks ul li.active {
-                background-color: #99D0FF;
-                color: #FFFFFF;
-                outline-width: 1vh;
-            }
-                #navLinks ul li.active:hover {
-                    background-color: #99D0FF;
-                    color: #99D0FF;
-                }
-								
-								#navLinks ul li.active {
-    background-color: #5CB3FF;
-    color: #FFFFFF;
-    outline-width: 1vh;
-}
-#navLinks ul li.active:hover {
-    background-color: #484848;
-    color: #FFFFFF;
-}
 
 span{
 font-family:Arial;font-size:3.5vmin;font-style:normal;font-weight:normal;text-decoration:none;text-transform:none;color: rgb(255,255,255);text-shadow: 0.3vmin 0.3vmin black;
 }
 
 
-textarea {
+#textSave {
+    position:absolute;
+    top: 30vh;
+    left:15vw;
+    width:50vw;
+    height:40vh;
     resize: none;
+
 		 text-align: center;
-		 border: #56A5EC 1vh solid;
+		 
 }
 
 
@@ -301,39 +262,8 @@ textarea {
     visibility:hidden;
     
  }
-  #navLinks ul li {
-            float: left;
-            text-align: center;
-            margin: 1vh;
-            list-style: none;
-            cursor: pointer;
-            background-color: lightBlue;
-            padding: 1vh;
-            border-radius: 50vh;
-            border: #56A5EC 1vh solid;
-        }
-            #navLinks ul li:hover {
-                background-color: #99D0FF;
-            }
-            #navLinks ul li.active {
-                background-color: #99D0FF;
-                color: #FFFFFF;
-                outline-width: 1vh;
-            }
-                #navLinks ul li.active:hover {
-                    background-color: #99D0FF;
-                    color: #99D0FF;
-                }
-								
-								#navLinks ul li.active {
-    background-color: #5CB3FF;
-    color: #FFFFFF;
-    outline-width: 1vh;
-}
-#navLinks ul li.active:hover {
-    background-color: #484848;
-    color: #FFFFFF;
-}
+
+
 .menuitemUit{
     visibility:visible;
     border-bottom: 1vh solid rgba(0,0,0,.05);
@@ -546,18 +476,18 @@ textarea {
     width:50vw;
     height:60vh;
 }
-@-webkit-keyframes moveclouds {
-	0vw {margin-left: 200vw;}
-	100vw {margin-left: -200vw;}
-}
-@-moz-keyframes moveclouds {
-	0vw {margin-left: 200vw;}
-	100vw {margin-left: -200vw;}
-}
-@-o-keyframes moveclouds {
-	0vw {margin-left: 200vw;}
-	100vw {margin-left: -200vw;}
-}
+//@-webkit-keyframes moveclouds {
+//	0vw {margin-left: 200vw;}
+//	100vw {margin-left: -200vw;}
+//}
+//@-moz-keyframes moveclouds {
+//	0vw {margin-left: 200vw;}
+//	100vw {margin-left: -200vw;}
+//}
+//@-o-keyframes moveclouds {
+//	0vw {margin-left: 200vw;}
+//	100vw {margin-left: -200vw;}
+//}
 .fluidHeightIn{
     	position: absolute;
 	width: 90vw;
@@ -688,4 +618,4 @@ textarea {
 #player {
  width: 16vw;
  height: 10vh;
-}?
+}

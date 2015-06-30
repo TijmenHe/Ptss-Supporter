@@ -19,7 +19,7 @@
                   
                         <a href="index.html">
                             <img src="images/img2.png" class="home" alt="home">
-                 
+                        </a>
                   
                         <a href="#null" onclick="javascript:history.forward();">
                             <img src="images/volgende.png" class="home" alt="volgende">
@@ -38,20 +38,27 @@
         </div>
         
           <div class="fluidHeightIn">
-  <div class="sliderContainer">
-    <div class="iosSlider">
-      <div class="slider">
-          <div class="item item1">
-  
 
-                    <form name="dagboek">
-                    <h1>Uitleg1</h1>
-                    <textarea name="iets" form="dagboek" placeholder="schrijf hier in je dagboek"></textarea><br>
-                    <input type="submit" value="opslaan">
-                    </form>
-                </div>
-            </div>
-        </div>
+ 
+  
+              <span>
+                  Schrijf hier in je dagboek of open een pagina uit je dagboek<br><br>
+                        Naam waaronder je deze pagina wilt opslaan:<br>
+                        <input id="inputFileNameToSaveAs">
+                        <button onclick="saveTextAsFile()">Sla deze pagina op</button><br>
+                                               
+                        Vind een pagina die je wilt openen:<br>
+                      <input type="file" id="fileToLoad">
+                       <button onclick="loadFileAsText()">Open de gekozen pagina</button>
+
+			<textarea id="textSave"></textarea>
+
+                        
+                        
+                 </span> 
+              
       </div>
+          </div>
+
     </body>
 </html>
