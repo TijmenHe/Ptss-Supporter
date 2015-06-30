@@ -117,8 +117,8 @@ body {
 
 .home{
        margin-top:0vh;
-       margin-left:11vw;
-       margin-right:11vw;
+       margin-left:8vw;
+       margin-right:9vw;
        width:10vw;
        height:10vh;
 
@@ -144,7 +144,22 @@ text-shadow: -2px -2px 1px #FFF, -1px -1px 1px #FFF, 1px 1px 1px rgba(232, 247, 
        height:10vh;
 
 }
+.home3{
+       margin-top:0vh;
+       margin-left:13vw;
+       margin-right:12vw;
+       width:10vw;
+       height:10vh;
 
+}
+.home4{
+       margin-top:0vh;
+     margin-left:11.5vw;
+       margin-right:12.5vw;
+       width:10vw;
+       height:10vh;
+
+}
 @-ms-viewport{
   width: device-width;
   height:device-height;
@@ -618,4 +633,20 @@ textarea {
 #player {
  width: 16vw;
  height: 10vh;
+}
+input[type=radio] {
+transform: scale(1.5);
+-moz-transform: scale(1.5);
+-ms-transform: scale(1.5);
+-webkit-transform: scale(1.5);
+-o-transform: scale(1.5);
+
+}
+input[type=submit] {
+transform: scale(2.5);
+-moz-transform: scale(2.5);
+-ms-transform: scale(2.5);
+-webkit-transform: scale(2.5);
+-o-transform: scale(2.5);
+
 }
