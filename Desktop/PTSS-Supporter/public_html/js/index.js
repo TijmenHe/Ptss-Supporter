@@ -59,7 +59,7 @@ function bunnyPost(){
   
   function saveTextAsFile()
 {
-	var textToWrite = document.getElementById("inputTextToSave").value;
+	var textToWrite = document.getElementById("textSave").value;
 	var textFileAsBlob = new Blob([textToWrite], {type:'text/plain'});
 	var fileNameToSaveAs = document.getElementById("inputFileNameToSaveAs").value;
 
@@ -98,7 +98,7 @@ function loadFileAsText()
 	fileReader.onload = function(fileLoadedEvent) 
 	{
 		var textFromFileLoaded = fileLoadedEvent.target.result;
-		document.getElementById("inputTextToSave").value = textFromFileLoaded;
+		document.getElementById("textSave").value = textFromFileLoaded;
 	};
 	fileReader.readAsText(fileToLoad, "UTF-8");
 }
